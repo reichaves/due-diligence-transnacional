@@ -1,0 +1,29 @@
+{
+  "name": "due-diligence-transnacional",
+  "version": "0.1.0",
+  "description": "Pipeline CLI para due diligence de brasileiros em bases públicas americanas",
+  "author": "Reinaldo Chaves <reichaves@gmail.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/reichaves/due-diligence-transnacional",
+  "skills": [
+    "skills/due-diligence-transnacional",
+    "skills/expand-brazilian-identity",
+    "skills/search-fec",
+    "skills/search-lobby-fara",
+    "skills/search-state-corps",
+    "skills/search-opencorporates",
+    "skills/search-news-archive",
+    "skills/triangulate-findings",
+    "skills/generate-dossier-pdf"
+  ],
+  "commands": [
+    "commands/investigar.md",
+    "commands/expandir-nome.md",
+    "commands/consultar-base.md",
+    "commands/gerar-dossie.md"
+  ],
+  "requires": {
+    "mcp": ["fec-finance"],
+    "env": ["OPENCORPORATES_API_KEY"]
+  }
+}

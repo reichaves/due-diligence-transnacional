@@ -1,0 +1,76 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/reichaves/due-diligence-transnacional/schemas/target.schema.json",
+  "title": "Target",
+  "description": "Input de uma investigação de due diligence transnacional. Preencher antes de iniciar o pipeline.",
+  "type": "object",
+  "required": ["nome_completo", "razao_investigativa"],
+  "unevaluatedProperties": false,
+  "properties": {
+    "nome_completo": {
+      "type": "string",
+      "minLength": 3,
+      "description": "Nome completo do alvo, em português, como consta em documentos oficiais brasileiros."
+    },
+    "ocupacao": {
+      "type": "string",
+      "description": "Ocupação ou cargo principal do alvo (ex: 'CEO do Grupo Refit', 'Empresário do setor de petróleo')."
+    },
+    "empresa_principal": {
+      "type": "string",
+      "description": "Nome da empresa ou organização com a qual o alvo é mais associado."
+    },
+    "cidade_residencia": {
+      "type": "string",
+      "description": "Cidade de residência (Brasil), se conhecida."
+    },
+    "uf_residencia_us": {
+      "type": "string",
+      "pattern": "^[A-Z]{2}$",
+      "description": "UF americana (dois caracteres maiúsculos) se o alvo for residente nos EUA. Ex: 'FL', 'TX', 'NY'."
+    },
+    "parentes": {
+      "type": "array",
+      "description": "Parentes diretos relevantes para a investigação. Cada um receberá variações de nome próprias.",
+      "items": {
+        "type": "object",
+        "required": ["nome", "relacao"],
+        "unevaluatedProperties": false,
+        "properties": {
+          "nome": {
+            "type": "string",
+            "minLength": 2
+          },
+          "relacao": {
+            "type": "string",
+            "enum": ["conjuge", "ex-conjuge", "pai", "mae", "filho", "filha", "irmao", "irma", "outro"],
+            "description": "Relação de parentesco com o alvo."
+          }
+        }
+      }
+    },
+    "apelidos": {
+      "type": "array",
+      "description": "Apelidos, nomes de guerra, pseudônimos ou variações conhecidas do nome.",
+      "items": {
+        "type": "string",
+        "minLength": 2
+      }
+    },
+    "razao_investigativa": {
+      "type": "string",
+      "minLength": 30,
+      "description": "Descrição factual de por que esta pessoa está sendo investigada. Vai para o log e o dossiê. Mínimo 30 caracteres. Ex: 'Gestor de refinaria no Texas investigado por superfaturamento em contrato com a Petrobras'."
+    },
+    "bases_prioritarias": {
+      "type": "array",
+      "description": "Bases a consultar. Omitir para usar todas (padrão).",
+      "items": {
+        "type": "string",
+        "enum": ["fec", "lda-fara", "state-corps", "opencorporates", "news"]
+      },
+      "default": ["fec", "lda-fara", "state-corps", "opencorporates", "news"],
+      "uniqueItems": true
+    }
+  }
+}

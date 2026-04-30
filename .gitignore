@@ -1,0 +1,65 @@
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+*.pth
+.Python
+
+# uv
+.venv/
+uv.lock
+
+# Virtual environments (other tools)
+venv/
+env/
+ENV/
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+*.log
+
+# mypy / ruff / black
+.mypy_cache/
+.ruff_cache/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# PDF de casos reais (nunca comitar dossiês de investigações reais)
+cases/*/dossier.pdf
+cases/*/findings*.json
+cases/*/identity-variations.json
+
+# Exceção: exemplos didáticos (PDF gerado sinteticamente)
+!examples/case-fictional/dossier.pdf
+!examples/case-magro-redacted/dossier.pdf
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDEs
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Temporary
+*.tmp
+*.bak
+*.swp
