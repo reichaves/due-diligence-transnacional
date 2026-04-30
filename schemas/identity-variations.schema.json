@@ -1,0 +1,84 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/reichaves/due-diligence-transnacional/schemas/identity-variations.schema.json",
+  "title": "IdentityVariations",
+  "description": "Output da sub-skill expand-brazilian-identity: lista de variações de nome para busca em bases americanas",
+  "type": "object",
+  "required": ["target_name", "generated_at", "approved_by_human", "variations"],
+  "additionalProperties": false,
+  "properties": {
+    "target_name": {
+      "type": "string",
+      "minLength": 2,
+      "description": "Nome completo do alvo conforme fornecido pelo usuário"
+    },
+    "generated_at": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Timestamp ISO 8601 da geração das variações"
+    },
+    "approved_by_human": {
+      "type": "boolean",
+      "description": "true somente após revisão e confirmação explícita do jornalista"
+    },
+    "approved_at": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Timestamp da aprovação humana (se aprovado)"
+    },
+    "approved_by": {
+      "type": "string",
+      "description": "Identificador do jornalista que aprovou (opcional)"
+    },
+    "variations": {
+      "type": "array",
+      "minItems": 1,
+      "description": "Lista de variações de nome geradas",
+      "items": {
+        "type": "object",
+        "required": ["variation", "type"],
+        "additionalProperties": false,
+        "properties": {
+          "variation": {
+            "type": "string",
+            "minLength": 1,
+            "description": "A variação do nome"
+          },
+          "type": {
+            "type": "string",
+            "enum": [
+              "full_name",
+              "no_accents",
+              "first_last",
+              "last_first",
+              "initials_last",
+              "surname_only",
+              "alias",
+              "relative"
+            ],
+            "description": "Categoria da variação"
+          },
+          "note": {
+            "type": "string",
+            "description": "Explicação opcional da variação (ex: relação familiar, motivo da inclusão)"
+          }
+        }
+      }
+    }
+  },
+  "examples": [
+    {
+      "target_name": "Ricardo Andrade Magro",
+      "generated_at": "2026-04-30T14:00:00+00:00",
+      "approved_by_human": false,
+      "variations": [
+        {"variation": "Ricardo Andrade Magro", "type": "full_name", "note": "Nome completo conforme fornecido"},
+        {"variation": "Ricardo Magro",         "type": "first_last", "note": "Primeiro nome + último sobrenome, sem acentos"},
+        {"variation": "Magro Ricardo",         "type": "last_first", "note": "Ordem invertida — comum em formulários americanos"},
+        {"variation": "R. A. Magro",           "type": "initials_last", "note": "Iniciais + último sobrenome"},
+        {"variation": "R. Magro",              "type": "initials_last", "note": "Primeira inicial + último sobrenome"},
+        {"variation": "Magro",                 "type": "surname_only", "note": "Sobrenome isolado — busca ampla, alto ruído"}
+      ]
+    }
+  ]
+}

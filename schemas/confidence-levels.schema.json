@@ -1,0 +1,57 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/reichaves/due-diligence-transnacional/schemas/confidence-levels.schema.json",
+  "title": "ConfidenceLevel",
+  "description": "Escala de confiança para afirmações no dossiê de due diligence transnacional",
+  "type": "string",
+  "enum": ["confirmado", "provavel", "indicio", "nao-encontrado"],
+  "$defs": {
+    "confidence_annotation": {
+      "type": "object",
+      "required": ["level", "rationale"],
+      "additionalProperties": false,
+      "properties": {
+        "level": {
+          "$ref": "#",
+          "description": "Nível de confiança da afirmação"
+        },
+        "rationale": {
+          "type": "string",
+          "minLength": 10,
+          "description": "Justificativa para o nível atribuído"
+        },
+        "sources": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["base", "id", "consulted_at"],
+            "properties": {
+              "base": {
+                "type": "string",
+                "enum": ["FEC", "LDA", "FARA", "Sunbiz", "Delaware", "Texas", "OpenCorporates", "news", "other"]
+              },
+              "id": {
+                "type": "string",
+                "description": "ID da transação, registro ou URL"
+              },
+              "consulted_at": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "url": {
+                "type": "string",
+                "format": "uri"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "examples": [
+    "confirmado",
+    "provavel",
+    "indicio",
+    "nao-encontrado"
+  ]
+}
