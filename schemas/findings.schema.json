@@ -1,0 +1,107 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/reichaves/due-diligence-transnacional/schemas/findings.schema.json",
+  "title": "Findings",
+  "description": "Output de uma sub-skill de busca no pipeline de due diligence transnacional",
+  "type": "object",
+  "required": ["base", "consulted_at", "queries_executed", "hits", "no_hits"],
+  "properties": {
+    "base": {
+      "type": "string",
+      "enum": ["FEC", "LDA", "FARA", "FL-SUNBIZ", "DE-CORPS", "TX-COMPTROLLER", "OPENCORPORATES", "NEWS-BR", "NEWS-US"],
+      "description": "Identificador da base de dados consultada"
+    },
+    "consulted_at": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Timestamp ISO 8601 da consulta"
+    },
+    "queries_executed": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "Número total de queries disparadas (uma por variação de nome)"
+    },
+    "status": {
+      "type": "string",
+      "enum": ["ok", "error", "partial"],
+      "default": "ok",
+      "description": "Status da execução: ok = sucesso total, partial = alguns erros mas com resultados, error = falha total"
+    },
+    "error_message": {
+      "type": "string",
+      "description": "Mensagem de erro quando status = error ou partial"
+    },
+    "hits": {
+      "type": "array",
+      "description": "Registros encontrados — cada item é um achado com fonte explícita",
+      "items": {
+        "type": "object",
+        "required": ["variation_matched", "source_id", "confidence", "raw_record"],
+        "properties": {
+          "variation_matched": {
+            "type": "string",
+            "description": "Variação de nome exata usada na query que retornou este hit"
+          },
+          "match_type": {
+            "type": "string",
+            "enum": ["exact", "fuzzy", "substring"],
+            "description": "Tipo de correspondência retornado pela base"
+          },
+          "source_id": {
+            "type": "string",
+            "description": "ID único do registro na base (transaction_id, filing_id, entity_number etc.)"
+          },
+          "source_url": {
+            "type": "string",
+            "format": "uri",
+            "description": "URL direta para o registro na base pública"
+          },
+          "confidence": {
+            "type": "string",
+            "enum": ["confirmado", "provavel", "indicio", "nao-encontrado"],
+            "description": "Nível de confiança conforme escala em skills/due-diligence-transnacional/references/confidence-levels.md"
+          },
+          "raw_record": {
+            "type": "object",
+            "description": "Registro bruto exatamente como retornado pela base — não modificar",
+            "additionalProperties": true
+          },
+          "normalized": {
+            "type": "object",
+            "description": "Campos normalizados para triangulação entre bases",
+            "properties": {
+              "full_name": {"type": "string"},
+              "address": {"type": "string"},
+              "state": {"type": "string"},
+              "date": {"type": "string", "format": "date"},
+              "amount_usd": {"type": "number"},
+              "entity_name": {"type": "string"},
+              "entity_type": {"type": "string"},
+              "role": {"type": "string"}
+            }
+          }
+        }
+      }
+    },
+    "no_hits": {
+      "type": "array",
+      "description": "Variações de nome testadas que não retornaram resultados",
+      "items": {"type": "string"}
+    },
+    "legal_context": {
+      "type": "array",
+      "description": "Contexto legal relevante para interpretar os achados ou a ausência deles",
+      "items": {"type": "string"}
+    },
+    "next_frontiers": {
+      "type": "array",
+      "description": "Próximas frentes de investigação sugeridas a partir dos achados",
+      "items": {"type": "string"}
+    },
+    "methodology_note": {
+      "type": "string",
+      "description": "Nota metodológica: limitações da base, período coberto, campos pesquisados"
+    }
+  },
+  "additionalProperties": false
+}

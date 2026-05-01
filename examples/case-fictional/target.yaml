@@ -1,0 +1,34 @@
+# Fictional case for didactic use — all data is synthetic
+# This case walks through the full pipeline without real personal information.
+
+nome_completo: "Carlos Eduardo Fontana"
+
+ocupacao: "Sócio-Diretor"
+empresa_principal: "Fontana Energy Partners LLC"
+
+cidade_residencia: "São Paulo"
+
+parentes:
+  - nome: "Mariana Silva Fontana"
+    relacao: "conjuge"
+  - nome: "Roberto Fontana"
+    relacao: "pai"
+
+apelidos:
+  - "Carlos Fontana"
+  - "C.E. Fontana"
+
+razao_investigativa: >
+  Carlos Eduardo Fontana é sócio-diretor da Fontana Energy Partners, empresa
+  constituída em Delaware com operações declaradas no setor de petróleo e gás
+  no Texas. A empresa aparece em contrato de fornecimento com refinaria
+  investigada por irregularidades ambientais. O objetivo é verificar se Fontana
+  tem registros de lobby, doações eleitorais ou registro como agente estrangeiro
+  nos EUA, e mapear a estrutura corporativa.
+
+bases_prioritarias:
+  - fec
+  - lda-fara
+  - state-corps
+  - opencorporates
+  - news

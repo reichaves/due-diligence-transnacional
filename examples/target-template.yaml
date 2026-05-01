@@ -1,0 +1,41 @@
+# Target template for due-diligence-transnacional pipeline
+# Copy this file to cases/<slug-do-alvo>/target.yaml and fill in the fields.
+# Required fields: nome_completo, razao_investigativa
+# Schema: schemas/target.schema.json
+
+nome_completo: "Nome Completo Aqui"
+
+# Optional: known occupation and employer
+ocupacao: "CEO / Sócio / Diretor"
+empresa_principal: "Nome da empresa principal"
+
+# Optional: city/state of residence
+cidade_residencia: "São Paulo"
+
+# Optional: US state if the person is a US resident
+# uf_residencia_us: "FL"
+
+# Optional: known relatives (spouse, parents, children) — their names will also be searched
+parentes:
+  - nome: "Nome do Cônjuge"
+    relacao: "conjuge"
+  # - nome: "Nome do Filho"
+  #   relacao: "filho"
+
+# Optional: known nicknames or alternative name spellings
+apelidos:
+  # - "Rick"
+  # - "Ricardão"
+
+# REQUIRED: Journalistic reason for the investigation (min 30 chars, goes into the dossier log)
+razao_investigativa: >
+  Descreva aqui o motivo jornalístico da investigação. Por que esta pessoa
+  é de interesse público? Qual o contexto da apuração? Mínimo de 30 caracteres.
+
+# Optional: priority databases (default: all five)
+# bases_prioritarias:
+#   - fec
+#   - lda-fara
+#   - state-corps
+#   - opencorporates
+#   - news
