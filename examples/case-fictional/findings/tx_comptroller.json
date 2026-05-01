@@ -1,0 +1,52 @@
+{
+  "base": "TX-COMPTROLLER",
+  "consulted_at": "2026-05-01T10:15:00-03:00",
+  "queries_executed": 5,
+  "status": "ok",
+  "hits": [
+    {
+      "variation_matched": "Fontana Energy Partners",
+      "match_type": "substring",
+      "source_id": "TX-32100987654",
+      "source_url": "https://mycpa.cpa.state.tx.us/coa/Details.do?accountNumber=32100987654",
+      "confidence": "confirmado",
+      "raw_record": {
+        "entity_name": "Fontana Energy Partners LLC",
+        "taxpayer_number": "32100987654",
+        "entity_type": "Foreign Limited Liability Company",
+        "status": "Active - In Good Standing",
+        "right_to_transact_business": "ACTIVE",
+        "effective_date": "2021-04-20",
+        "registered_agent": "BrightPath Legal Services LLC",
+        "registered_office": "9800 Richmond Ave Ste 200, Houston, TX 77042",
+        "mailing_address": "9800 Richmond Ave Ste 200, Houston, TX 77042",
+        "principal_office_address": "9800 Richmond Ave Ste 200, Houston, TX 77042",
+        "sic_code": "1311",
+        "sic_description": "Crude Petroleum and Natural Gas"
+      },
+      "normalized": {
+        "entity_name": "Fontana Energy Partners LLC",
+        "address": "9800 Richmond Ave Ste 200, Houston, TX 77042",
+        "state": "TX",
+        "date": "2021-04-20",
+        "entity_type": "Foreign LLC"
+      }
+    }
+  ],
+  "no_hits": [
+    "Carlos Eduardo Fontana",
+    "Carlos Fontana",
+    "C. E. Fontana",
+    "Roberto Fontana"
+  ],
+  "legal_context": [
+    "O Texas Secretary of State exige que LLCs estrangeiras (incorporadas em outros estados) se registrem como 'Foreign LLC' para operar no estado. O SIC Code 1311 (Crude Petroleum and Natural Gas) confirma a natureza das operações.",
+    "O endereço registrado em Houston (9800 Richmond Ave) é um centro empresarial que abriga múltiplas empresas — comum para operações de menor escala no setor de energia."
+  ],
+  "next_frontiers": [
+    "Verificar em Railroad Commission of Texas (rrc.texas.gov) se Fontana Energy Partners tem licenças de poço ou operador",
+    "Investigar o endereço 9800 Richmond Ave, Houston TX: quais outras empresas do setor de energia usam o mesmo endereço",
+    "Cruzar o SIC 1311 com contratos de fornecimento da refinaria investigada (verificar se a refinaria está em TX ou fora)"
+  ],
+  "methodology_note": "Busca via Texas Comptroller of Public Accounts — Taxable Entity Search (mycpa.cpa.state.tx.us). Cobertura: todas as entidades registradas no Texas, ativas e inativas."
+}

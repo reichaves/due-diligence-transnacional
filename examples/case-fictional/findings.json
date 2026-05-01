@@ -1,0 +1,769 @@
+{
+  "target_name": "Carlos Eduardo Fontana",
+  "consolidated_at": "2026-05-01T10:43:39.907431+00:00",
+  "sources_count": 9,
+  "total_hits": 10,
+  "findings": [
+    {
+      "base": "DE-CORPS",
+      "consulted_at": "2026-05-01T10:13:00-03:00",
+      "queries_executed": 5,
+      "status": "ok",
+      "hits": [
+        {
+          "variation_matched": "Fontana Energy Partners",
+          "match_type": "substring",
+          "source_id": "DE-7654321",
+          "source_url": "https://icis.corp.delaware.gov/Ecorp/EntitySearch/NameSearch.aspx",
+          "confidence": "confirmado",
+          "raw_record": {
+            "entity_name": "Fontana Energy Partners LLC",
+            "file_number": "7654321",
+            "entity_type": "Limited Liability Company",
+            "incorporation_date": "2021-02-28",
+            "state": "Delaware",
+            "status": "Active",
+            "registered_agent": "The Corporation Trust Company",
+            "registered_office": "1209 Orange Street, Wilmington, DE 19801",
+            "tax_status": "Good Standing"
+          },
+          "normalized": {
+            "entity_name": "Fontana Energy Partners LLC",
+            "address": "1209 Orange Street, Wilmington, DE 19801",
+            "state": "DE",
+            "date": "2021-02-28",
+            "entity_type": "LLC"
+          }
+        }
+      ],
+      "no_hits": [
+        "Carlos Eduardo Fontana",
+        "Carlos Fontana",
+        "C. E. Fontana",
+        "Roberto Fontana"
+      ],
+      "legal_context": [
+        "Delaware incorpora mais de 60% das Fortune 500 e é jurisdição preferida para offshores por proteção de privacidade — nomes de membros/gerentes de LLCs não são divulgados publicamente.",
+        "O registered agent (The Corporation Trust Company) é genérico — praticamente toda offshore usa agentes profissionais em Delaware. Não indica vínculo com a empresa além da incorporação.",
+        "Para identificar os 'ultimate beneficial owners' de uma Delaware LLC é necessário processo judicial ou solicitação à FinCEN sob o Corporate Transparency Act (vigente desde 01/01/2024)."
+      ],
+      "next_frontiers": [
+        "Solicitar informações de UBO via Corporate Transparency Act (FinCEN BOI database) — válido para LLCs com receita < USD 5 mi e < 20 funcionários",
+        "Verificar se a Fontana Energy Partners DE tem contratos com o governo federal via USASpending.gov",
+        "Cruzar a data de incorporação em DE (2021-02-28) com a data de registro em FL (2021-03-15) para confirmar sequência: holding DE → operacional FL"
+      ],
+      "methodology_note": "Busca via Delaware ICIS Entity Name Search (icis.corp.delaware.gov). Limitação: Delaware não divulga nome de membros/gerentes de LLCs sem processo judicial. Cobertura: todas as entidades registradas no estado."
+    },
+    {
+      "base": "FARA",
+      "consulted_at": "2026-05-01T10:09:00-03:00",
+      "queries_executed": 8,
+      "status": "ok",
+      "hits": [],
+      "no_hits": [
+        "Carlos Eduardo Fontana",
+        "Carlos Fontana",
+        "Fontana Carlos",
+        "C. E. Fontana",
+        "C. Fontana",
+        "Fontana Energy Partners",
+        "Fontana Energy Partners LLC",
+        "Fontana"
+      ],
+      "legal_context": [
+        "O Foreign Agents Registration Act (22 U.S.C. § 611 et seq.) exige que agentes de governos estrangeiros se registrem no DOJ. A ausência de registro não exclui atuação — pode indicar que nenhum governo estrangeiro está formalmente envolvido, ou que o registro está pendente (atraso típico de 3-6 meses).",
+        "A Fontana Energy Partners LLC, sendo empresa americana, não seria automaticamente sujeita ao FARA. O registro seria exigido se a empresa agisse em benefício de um principal estrangeiro (ex: Petrobras, governo brasileiro)."
+      ],
+      "next_frontiers": [
+        "Verificar manualmente em efile.fara.gov — a cobertura da busca automatizada é parcial para registros anteriores a 2016",
+        "Investigar se a Fontana Energy Partners tem contratos diretos com Petrobras, ANP ou qualquer entidade governamental brasileira (tornaria FARA aplicável)",
+        "Verificar a Suprema Corte v. Zakharova para entender o limiar de 'foreign principal' aplicável ao caso"
+      ],
+      "methodology_note": "Buscas realizadas via efile.fara.gov/api/v1/search e scraping da interface pública. Cobertura: 1941-2024 (registros digitalizados). Limitação: registros pré-1995 têm cobertura parcial."
+    },
+    {
+      "base": "FEC",
+      "consulted_at": "2026-05-01T10:05:00-03:00",
+      "queries_executed": 11,
+      "status": "ok",
+      "hits": [],
+      "no_hits": [
+        "Carlos Eduardo Fontana",
+        "Carlos Fontana",
+        "Fontana Carlos",
+        "C. E. Fontana",
+        "C. Fontana",
+        "Fontana",
+        "C.E. Fontana",
+        "Mariana Silva Fontana",
+        "Roberto Fontana",
+        "Fontana Energy Partners",
+        "Fontana Energy Partners LLC"
+      ],
+      "legal_context": [
+        "52 U.S.C. § 30121 proíbe estrangeiros não-residentes de contribuírem para campanhas federais americanas. A ausência de registros é o resultado esperado e legalmente coerente para um cidadão brasileiro sem residência permanente nos EUA — não constitui achado negativo.",
+        "Cidadãos brasileiros com green card (LPR) são considerados 'US persons' para fins de doação eleitoral. Se Fontana possuir residência permanente, a ausência seria significativa."
+      ],
+      "next_frontiers": [
+        "Verificar se Carlos Eduardo Fontana possui green card ou cidadania americana — se sim, doação seria legal e a ausência seria achado relevante",
+        "Verificar contribuições a PACs independentes (Super PACs) e organizações 501(c)(4), que aceitam doações de estrangeiros em determinadas circunstâncias",
+        "Consultar FEC Schedule B (disbursements) para verificar se algum PAC fez gastos ligados a interesses de Fontana Energy Partners"
+      ],
+      "methodology_note": "Buscas realizadas via MCP fec-finance:search_contributions. Cobertura: ciclos eleitorais 2018-2024. Campos consultados: contributor_name (todas as variações), contributor_employer (Fontana Energy Partners LLC). Sem filtro de estado."
+    },
+    {
+      "base": "FL-SUNBIZ",
+      "consulted_at": "2026-05-01T10:11:00-03:00",
+      "queries_executed": 7,
+      "status": "ok",
+      "hits": [
+        {
+          "variation_matched": "Fontana Energy Partners LLC",
+          "match_type": "exact",
+          "source_id": "L21000012345",
+          "source_url": "https://search.sunbiz.org/Inquiry/CorporationSearch/SearchResultDetail?inquirytype=EntityName&directionType=Initial&searchNameOrder=FONTANAENERGYPARTNERS&aggregateId=flal-l21000012345-12a34b56",
+          "confidence": "confirmado",
+          "raw_record": {
+            "entity_name": "Fontana Energy Partners LLC",
+            "document_number": "L21000012345",
+            "fei_ein_number": "87-1234567",
+            "date_filed": "2021-03-15",
+            "state": "FL",
+            "status": "ACTIVE",
+            "last_event": "ANNUAL REPORT",
+            "last_event_date": "2025-04-01",
+            "principal_address": "1200 Brickell Ave Ste 500, Miami, FL 33131",
+            "mailing_address": "1200 Brickell Ave Ste 500, Miami, FL 33131",
+            "registered_agent": {
+              "name": "Carlos Eduardo Fontana",
+              "address": "1200 Brickell Ave Ste 500, Miami, FL 33131"
+            },
+            "authorized_persons": [
+              {
+                "name": "Carlos Eduardo Fontana",
+                "title": "MGR",
+                "address": "1200 Brickell Ave Ste 500, Miami, FL 33131"
+              }
+            ]
+          },
+          "normalized": {
+            "full_name": "Carlos Eduardo Fontana",
+            "entity_name": "Fontana Energy Partners LLC",
+            "address": "1200 Brickell Ave Ste 500, Miami, FL 33131",
+            "state": "FL",
+            "date": "2021-03-15",
+            "entity_type": "LLC",
+            "role": "registered_agent"
+          }
+        }
+      ],
+      "no_hits": [
+        "Carlos Eduardo Fontana",
+        "Carlos Fontana",
+        "C. E. Fontana",
+        "C. Fontana",
+        "Mariana Silva Fontana",
+        "Roberto Fontana"
+      ],
+      "legal_context": [
+        "O Florida Department of State — Division of Corporations publica registros de todas as entidades incorporadas ou qualificadas na Flórida. Registros são públicos conforme Florida Sunshine Laws (F.S. § 119.01).",
+        "A presença de Carlos Eduardo Fontana como Registered Agent e Manager (MGR) confirma controle direto sobre a entidade."
+      ],
+      "next_frontiers": [
+        "Verificar Annual Reports de 2021-2025 para rastrear mudanças de endereço ou de gestores",
+        "Pesquisar por outros registros usando o EIN 87-1234567 em bases de contratos federais (USASpending.gov)",
+        "Verificar se o endereço 1200 Brickell Ave Ste 500 abriga outras empresas sob controle do mesmo gestor"
+      ],
+      "methodology_note": "Busca via Sunbiz Entity Name Search (search.sunbiz.org). Cobertura: todas as entidades ativas e inativas com registro na Flórida."
+    },
+    {
+      "base": "LDA",
+      "consulted_at": "2026-05-01T10:07:00-03:00",
+      "queries_executed": 8,
+      "status": "ok",
+      "hits": [
+        {
+          "variation_matched": "Fontana Energy Partners LLC",
+          "match_type": "exact",
+          "source_id": "LDA-2023-Q3-BPGR-0042",
+          "source_url": "https://lda.senate.gov/filings/public/filing/LDA-2023-Q3-BPGR-0042/",
+          "confidence": "confirmado",
+          "raw_record": {
+            "registrant_name": "BrightPath Government Relations LLC",
+            "registrant_id": "BPGR-10045",
+            "client_name": "Fontana Energy Partners LLC",
+            "client_id": "CLIENT-FEP-2023",
+            "filing_period": "2023 Mid-Year (Q3)",
+            "filing_type": "LD-2 Quarterly Activity Report",
+            "income_amount": "20000",
+            "general_issue_area_code": "ENE",
+            "issue_description": "Energy regulations; Texas refinery operating permits; EPA Clean Water Act compliance for Gulf Coast operations; Department of Energy offshore production incentives",
+            "government_entities_contacted": [
+              "House Committee on Energy and Commerce",
+              "Senate Committee on Environment and Public Works",
+              "U.S. Environmental Protection Agency (EPA)",
+              "Department of Energy (DOE)"
+            ],
+            "lobbyists": [
+              {
+                "name": "James R. Whitmore",
+                "covered_official_position": "Former EPA Deputy Administrator"
+              }
+            ]
+          },
+          "normalized": {
+            "entity_name": "Fontana Energy Partners LLC",
+            "date": "2023-07-01",
+            "amount_usd": 20000,
+            "role": "client"
+          }
+        },
+        {
+          "variation_matched": "Fontana Energy Partners LLC",
+          "match_type": "exact",
+          "source_id": "LDA-2023-Q4-BPGR-0051",
+          "source_url": "https://lda.senate.gov/filings/public/filing/LDA-2023-Q4-BPGR-0051/",
+          "confidence": "confirmado",
+          "raw_record": {
+            "registrant_name": "BrightPath Government Relations LLC",
+            "registrant_id": "BPGR-10045",
+            "client_name": "Fontana Energy Partners LLC",
+            "client_id": "CLIENT-FEP-2023",
+            "filing_period": "2023 Year-End (Q4)",
+            "filing_type": "LD-2 Quarterly Activity Report",
+            "income_amount": "20000",
+            "general_issue_area_code": "ENE",
+            "issue_description": "Energy regulations; Texas refinery operating permits; EPA Clean Water Act compliance",
+            "government_entities_contacted": [
+              "U.S. Environmental Protection Agency (EPA)",
+              "Texas Commission on Environmental Quality (TCEQ)"
+            ],
+            "lobbyists": [
+              {
+                "name": "James R. Whitmore",
+                "covered_official_position": "Former EPA Deputy Administrator"
+              }
+            ]
+          },
+          "normalized": {
+            "entity_name": "Fontana Energy Partners LLC",
+            "date": "2023-10-01",
+            "amount_usd": 20000,
+            "role": "client"
+          }
+        }
+      ],
+      "no_hits": [
+        "Carlos Eduardo Fontana",
+        "Carlos Fontana",
+        "Fontana Carlos",
+        "C. E. Fontana",
+        "C. Fontana",
+        "Mariana Silva Fontana",
+        "Roberto Fontana"
+      ],
+      "legal_context": [
+        "O Lobbying Disclosure Act (2 U.S.C. § 1601 et seq.) exige que lobbyistas registrem clientes e atividades a cada trimestre. A presença da Fontana Energy Partners LLC como cliente de lobby confirma atividade formal de influência junto ao Congresso e agências regulatórias americanas.",
+        "A contratação de James Whitmore, ex-Deputy Administrator da EPA, como lobbyista é legalmente permitida sob o LDA, mas representa uma revolving door que pode ser relevante para a investigação jornalística."
+      ],
+      "next_frontiers": [
+        "Solicitar os filings completos via lda.senate.gov (LD-203 e LD-2) para identificar legislação ou regulação específica alvo",
+        "Investigar BrightPath Government Relations LLC: outros clientes do mesmo lobbyista por possíveis conflitos de interesse",
+        "Verificar se James R. Whitmore respeitou o cooling-off period de 1 ano exigido pelo Ethics in Government Act"
+      ],
+      "methodology_note": "Buscas realizadas via lda.senate.gov/api/v1/filings. Cobertura: 2008-2024. Campos consultados: client_name (variações do alvo e da empresa principal)."
+    },
+    {
+      "base": "NEWS-BR",
+      "consulted_at": "2026-05-01T10:19:00-03:00",
+      "queries_executed": 8,
+      "status": "ok",
+      "hits": [
+        {
+          "variation_matched": "Carlos Fontana",
+          "match_type": "exact",
+          "source_id": "VALOR-20231115-FEP-001",
+          "source_url": "https://valor.globo.com/empresas/noticia/2023/11/15/empresa-de-energia-expande-texas.ghtml",
+          "confidence": "provavel",
+          "raw_record": {
+            "outlet": "Valor Econômico",
+            "title": "Empresa de energia com sede em Delaware expande operações no Texas",
+            "date": "2023-11-15",
+            "author": "[redacted para caso fictício]",
+            "excerpt": "A Fontana Energy Partners LLC, controlada pelo empresário paulistano Carlos Fontana, assinou contrato de fornecimento com a refinaria Lone Star Oil Co., confirmou a empresa em nota. A companhia está registrada em Delaware e mantém escritório operacional em Houston.",
+            "section": "Empresas"
+          },
+          "normalized": {
+            "full_name": "Carlos Fontana",
+            "entity_name": "Fontana Energy Partners LLC",
+            "date": "2023-11-15",
+            "role": "controlador"
+          }
+        }
+      ],
+      "no_hits": [
+        "Carlos Eduardo Fontana",
+        "Fontana Carlos",
+        "C. E. Fontana",
+        "C. Fontana",
+        "Fontana Energy Partners",
+        "Mariana Silva Fontana",
+        "Roberto Fontana"
+      ],
+      "legal_context": [],
+      "next_frontiers": [
+        "Buscar cobertura adicional em Folha de S.Paulo, O Globo, Estadão com variação 'Carlos Fontana' e 'Fontana Energy'",
+        "Verificar cobertura em Agência Pública, The Intercept Brasil, Piauí para possíveis investigações anteriores",
+        "Solicitar acesso ao arquivo do Valor Econômico para artigos pagos via LAI se jornalista tiver credencial de imprensa"
+      ],
+      "methodology_note": "Buscas via Google News API e busca direta em portais: Folha, Estadão, Globo, Valor, Intercept Brasil, Agência Pública, Revista Piauí. Cobertura aproximada: 2010-2026. Limitação: conteúdo atrás de paywall não foi recuperado integralmente."
+    },
+    {
+      "base": "NEWS-US",
+      "consulted_at": "2026-05-01T10:21:00-03:00",
+      "queries_executed": 8,
+      "status": "ok",
+      "hits": [
+        {
+          "variation_matched": "Fontana Energy Partners",
+          "match_type": "exact",
+          "source_id": "HCHRON-20240203-EPA-001",
+          "source_url": "https://www.houstonchronicle.com/business/energy/article/epa-texas-refineries-water-discharge-2024-001",
+          "confidence": "indicio",
+          "raw_record": {
+            "outlet": "Houston Chronicle",
+            "title": "EPA investigates three Texas refineries over water discharge violations",
+            "date": "2024-02-03",
+            "author": "[redacted para caso fictício]",
+            "excerpt": "Among the companies under EPA scrutiny for alleged Clean Water Act violations is Fontana Energy Partners LLC, a Delaware-registered firm with refinery supply operations in the Gulf Coast region. The company did not respond to requests for comment.",
+            "section": "Business/Energy"
+          },
+          "normalized": {
+            "entity_name": "Fontana Energy Partners LLC",
+            "date": "2024-02-03"
+          }
+        }
+      ],
+      "no_hits": [
+        "Carlos Eduardo Fontana",
+        "Carlos Fontana",
+        "Fontana Carlos",
+        "C. E. Fontana",
+        "C. Fontana",
+        "Roberto Fontana",
+        "Mariana Silva Fontana"
+      ],
+      "legal_context": [],
+      "next_frontiers": [
+        "Solicitar registros EPA via FOIA (EPA FOIA portal: epa.gov/foia) sobre a investigação de Clean Water Act mencionada",
+        "Verificar base ECHO (Enforcement and Compliance History Online) da EPA: echo.epa.gov para histórico de violações de Fontana Energy Partners",
+        "Buscar cobertura em Reuters, AP, ProPublica sobre a investigação da refinaria Lone Star Oil Co."
+      ],
+      "methodology_note": "Buscas via Google News, ProPublica Nerds API, Reuters Archive. Outlets monitorados: NYT, Washington Post, Wall Street Journal, Houston Chronicle, AP, Reuters, Bloomberg Law, ProPublica. Cobertura: 2015-2026."
+    },
+    {
+      "base": "OPENCORPORATES",
+      "consulted_at": "2026-05-01T10:17:00-03:00",
+      "queries_executed": 6,
+      "status": "ok",
+      "hits": [
+        {
+          "variation_matched": "Fontana Energy Partners LLC",
+          "match_type": "exact",
+          "source_id": "us_fl/L21000012345",
+          "source_url": "https://opencorporates.com/companies/us_fl/L21000012345",
+          "confidence": "confirmado",
+          "raw_record": {
+            "name": "Fontana Energy Partners LLC",
+            "jurisdiction_code": "us_fl",
+            "company_number": "L21000012345",
+            "company_type": "Limited Liability Company",
+            "incorporation_date": "2021-03-15",
+            "dissolution_date": null,
+            "current_status": "Active",
+            "registered_address": "1200 Brickell Ave Ste 500, Miami, FL 33131, US",
+            "opencorporates_url": "https://opencorporates.com/companies/us_fl/L21000012345",
+            "source": "Florida Division of Corporations",
+            "officers": [
+              {
+                "name": "Carlos Eduardo Fontana",
+                "role": "agent",
+                "start_date": "2021-03-15"
+              }
+            ]
+          },
+          "normalized": {
+            "full_name": "Carlos Eduardo Fontana",
+            "entity_name": "Fontana Energy Partners LLC",
+            "address": "1200 Brickell Ave Ste 500, Miami, FL 33131",
+            "state": "FL",
+            "date": "2021-03-15",
+            "entity_type": "LLC",
+            "role": "agent"
+          }
+        },
+        {
+          "variation_matched": "Fontana Energy Partners LLC",
+          "match_type": "exact",
+          "source_id": "us_de/7654321",
+          "source_url": "https://opencorporates.com/companies/us_de/7654321",
+          "confidence": "confirmado",
+          "raw_record": {
+            "name": "Fontana Energy Partners LLC",
+            "jurisdiction_code": "us_de",
+            "company_number": "7654321",
+            "company_type": "Limited Liability Company",
+            "incorporation_date": "2021-02-28",
+            "dissolution_date": null,
+            "current_status": "Active",
+            "registered_address": "1209 Orange Street, Wilmington, DE 19801, US",
+            "opencorporates_url": "https://opencorporates.com/companies/us_de/7654321",
+            "source": "Delaware Division of Corporations",
+            "officers": []
+          },
+          "normalized": {
+            "entity_name": "Fontana Energy Partners LLC",
+            "address": "1209 Orange Street, Wilmington, DE 19801",
+            "state": "DE",
+            "date": "2021-02-28",
+            "entity_type": "LLC"
+          }
+        },
+        {
+          "variation_matched": "Carlos Eduardo Fontana",
+          "match_type": "exact",
+          "source_id": "us_fl/officer/CEF-2021-001",
+          "source_url": "https://opencorporates.com/officers/CEF-2021-001",
+          "confidence": "provavel",
+          "raw_record": {
+            "name": "Carlos Eduardo Fontana",
+            "role": "registered_agent",
+            "company_name": "Fontana Energy Partners LLC",
+            "company_jurisdiction": "us_fl",
+            "company_number": "L21000012345",
+            "start_date": "2021-03-15",
+            "source": "Florida Division of Corporations"
+          },
+          "normalized": {
+            "full_name": "Carlos Eduardo Fontana",
+            "entity_name": "Fontana Energy Partners LLC",
+            "state": "FL",
+            "date": "2021-03-15",
+            "role": "registered_agent"
+          }
+        }
+      ],
+      "no_hits": [
+        "Fontana Carlos",
+        "C. E. Fontana",
+        "Mariana Silva Fontana",
+        "Roberto Fontana"
+      ],
+      "legal_context": [
+        "OpenCorporates agrega dados de registros corporativos públicos de mais de 140 jurisdições. A presença em múltiplas jurisdições americanas confirma a estrutura corporativa identificada nos registros estaduais individuais.",
+        "O officer search da OpenCorporates usa correspondência exata de nome — variações podem não ser capturadas automaticamente."
+      ],
+      "next_frontiers": [
+        "Expandir busca no OpenCorporates para jurisdições internacionais (Brasil, Cayman Islands, BVI) usando a mesma variação de nome",
+        "Usar a API officer search para buscar Carlos Eduardo Fontana em todas as jurisdições disponíveis",
+        "Verificar se há empresas no Brasil (CNPJ) com o mesmo nome via Receita Federal"
+      ],
+      "methodology_note": "Buscas via OpenCorporates API v0.4 (officer search e company search). Cobertura: 140+ jurisdições. Chave: OPENCORPORATES_API_KEY. Rate limit: 500 req/dia (plano gratuito)."
+    },
+    {
+      "base": "TX-COMPTROLLER",
+      "consulted_at": "2026-05-01T10:15:00-03:00",
+      "queries_executed": 5,
+      "status": "ok",
+      "hits": [
+        {
+          "variation_matched": "Fontana Energy Partners",
+          "match_type": "substring",
+          "source_id": "TX-32100987654",
+          "source_url": "https://mycpa.cpa.state.tx.us/coa/Details.do?accountNumber=32100987654",
+          "confidence": "confirmado",
+          "raw_record": {
+            "entity_name": "Fontana Energy Partners LLC",
+            "taxpayer_number": "32100987654",
+            "entity_type": "Foreign Limited Liability Company",
+            "status": "Active - In Good Standing",
+            "right_to_transact_business": "ACTIVE",
+            "effective_date": "2021-04-20",
+            "registered_agent": "BrightPath Legal Services LLC",
+            "registered_office": "9800 Richmond Ave Ste 200, Houston, TX 77042",
+            "mailing_address": "9800 Richmond Ave Ste 200, Houston, TX 77042",
+            "principal_office_address": "9800 Richmond Ave Ste 200, Houston, TX 77042",
+            "sic_code": "1311",
+            "sic_description": "Crude Petroleum and Natural Gas"
+          },
+          "normalized": {
+            "entity_name": "Fontana Energy Partners LLC",
+            "address": "9800 Richmond Ave Ste 200, Houston, TX 77042",
+            "state": "TX",
+            "date": "2021-04-20",
+            "entity_type": "Foreign LLC"
+          }
+        }
+      ],
+      "no_hits": [
+        "Carlos Eduardo Fontana",
+        "Carlos Fontana",
+        "C. E. Fontana",
+        "Roberto Fontana"
+      ],
+      "legal_context": [
+        "O Texas Secretary of State exige que LLCs estrangeiras (incorporadas em outros estados) se registrem como 'Foreign LLC' para operar no estado. O SIC Code 1311 (Crude Petroleum and Natural Gas) confirma a natureza das operações.",
+        "O endereço registrado em Houston (9800 Richmond Ave) é um centro empresarial que abriga múltiplas empresas — comum para operações de menor escala no setor de energia."
+      ],
+      "next_frontiers": [
+        "Verificar em Railroad Commission of Texas (rrc.texas.gov) se Fontana Energy Partners tem licenças de poço ou operador",
+        "Investigar o endereço 9800 Richmond Ave, Houston TX: quais outras empresas do setor de energia usam o mesmo endereço",
+        "Cruzar o SIC 1311 com contratos de fornecimento da refinaria investigada (verificar se a refinaria está em TX ou fora)"
+      ],
+      "methodology_note": "Busca via Texas Comptroller of Public Accounts — Taxable Entity Search (mycpa.cpa.state.tx.us). Cobertura: todas as entidades registradas no Texas, ativas e inativas."
+    }
+  ],
+  "triangulations": [
+    {
+      "type": "entity_match",
+      "sources": [
+        "NEWS-BR",
+        "NEWS-US",
+        "FL-SUNBIZ",
+        "DE-CORPS",
+        "OPENCORPORATES",
+        "LDA",
+        "TX-COMPTROLLER"
+      ],
+      "detail": "Entidade 'Fontana Energy Partners LLC' aparece em 7 bases distintas: NEWS-BR, NEWS-US, FL-SUNBIZ, DE-CORPS, OPENCORPORATES, LDA, TX-COMPTROLLER",
+      "matched_value": "Fontana Energy Partners LLC",
+      "confidence": "confirmado",
+      "source_ids": [
+        "DE-7654321",
+        "L21000012345",
+        "LDA-2023-Q3-BPGR-0042",
+        "LDA-2023-Q4-BPGR-0051",
+        "VALOR-20231115-FEP-001",
+        "HCHRON-20240203-EPA-001",
+        "us_fl/L21000012345",
+        "us_de/7654321",
+        "us_fl/officer/CEF-2021-001",
+        "TX-32100987654"
+      ]
+    },
+    {
+      "type": "address_match",
+      "sources": [
+        "OPENCORPORATES",
+        "DE-CORPS"
+      ],
+      "detail": "Endereço '1209 Orange Street, Wilmington, DE 19801' (ou variação) aparece em 2 bases: OPENCORPORATES, DE-CORPS",
+      "matched_value": "1209 Orange Street, Wilmington, DE 19801",
+      "confidence": "provavel",
+      "source_ids": [
+        "DE-7654321",
+        "us_de/7654321"
+      ]
+    },
+    {
+      "type": "address_match",
+      "sources": [
+        "FL-SUNBIZ",
+        "OPENCORPORATES"
+      ],
+      "detail": "Endereço '1200 Brickell Ave Ste 500, Miami, FL 33131' (ou variação) aparece em 2 bases: FL-SUNBIZ, OPENCORPORATES",
+      "matched_value": "1200 Brickell Ave Ste 500, Miami, FL 33131",
+      "confidence": "provavel",
+      "source_ids": [
+        "L21000012345",
+        "us_fl/L21000012345"
+      ]
+    },
+    {
+      "type": "person_match",
+      "sources": [
+        "FL-SUNBIZ",
+        "OPENCORPORATES"
+      ],
+      "detail": "Pessoa 'Carlos Eduardo Fontana' aparece em 2 bases: FL-SUNBIZ, OPENCORPORATES",
+      "matched_value": "Carlos Eduardo Fontana",
+      "confidence": "provavel",
+      "source_ids": [
+        "L21000012345",
+        "us_fl/L21000012345",
+        "us_fl/officer/CEF-2021-001"
+      ]
+    },
+    {
+      "type": "date_match",
+      "sources": [
+        "DE-CORPS",
+        "FL-SUNBIZ"
+      ],
+      "detail": "Entidade 'Fontana Energy Partners LLC' tem datas de registro/incorporação próximas: 2021-02-28 (DE-CORPS) e 2021-03-15 (FL-SUNBIZ) — diferença de 15 dias",
+      "matched_value": "2021-02-28",
+      "confidence": "provavel",
+      "source_ids": [
+        "DE-7654321",
+        "L21000012345"
+      ]
+    },
+    {
+      "type": "date_match",
+      "sources": [
+        "DE-CORPS",
+        "OPENCORPORATES"
+      ],
+      "detail": "Entidade 'Fontana Energy Partners LLC' tem datas de registro/incorporação próximas: 2021-02-28 (DE-CORPS) e 2021-03-15 (OPENCORPORATES) — diferença de 15 dias",
+      "matched_value": "2021-02-28",
+      "confidence": "provavel",
+      "source_ids": [
+        "DE-7654321",
+        "us_fl/L21000012345"
+      ]
+    },
+    {
+      "type": "date_match",
+      "sources": [
+        "DE-CORPS",
+        "OPENCORPORATES"
+      ],
+      "detail": "Entidade 'Fontana Energy Partners LLC' tem datas de registro/incorporação próximas: 2021-02-28 (DE-CORPS) e 2021-02-28 (OPENCORPORATES) — diferença de 0 dias",
+      "matched_value": "2021-02-28",
+      "confidence": "provavel",
+      "source_ids": [
+        "DE-7654321",
+        "us_de/7654321"
+      ]
+    },
+    {
+      "type": "date_match",
+      "sources": [
+        "DE-CORPS",
+        "OPENCORPORATES"
+      ],
+      "detail": "Entidade 'Fontana Energy Partners LLC' tem datas de registro/incorporação próximas: 2021-02-28 (DE-CORPS) e 2021-03-15 (OPENCORPORATES) — diferença de 15 dias",
+      "matched_value": "2021-02-28",
+      "confidence": "provavel",
+      "source_ids": [
+        "DE-7654321",
+        "us_fl/officer/CEF-2021-001"
+      ]
+    },
+    {
+      "type": "date_match",
+      "sources": [
+        "FL-SUNBIZ",
+        "OPENCORPORATES"
+      ],
+      "detail": "Entidade 'Fontana Energy Partners LLC' tem datas de registro/incorporação próximas: 2021-03-15 (FL-SUNBIZ) e 2021-03-15 (OPENCORPORATES) — diferença de 0 dias",
+      "matched_value": "2021-03-15",
+      "confidence": "provavel",
+      "source_ids": [
+        "L21000012345",
+        "us_fl/L21000012345"
+      ]
+    },
+    {
+      "type": "date_match",
+      "sources": [
+        "FL-SUNBIZ",
+        "OPENCORPORATES"
+      ],
+      "detail": "Entidade 'Fontana Energy Partners LLC' tem datas de registro/incorporação próximas: 2021-03-15 (FL-SUNBIZ) e 2021-02-28 (OPENCORPORATES) — diferença de 15 dias",
+      "matched_value": "2021-03-15",
+      "confidence": "provavel",
+      "source_ids": [
+        "L21000012345",
+        "us_de/7654321"
+      ]
+    },
+    {
+      "type": "date_match",
+      "sources": [
+        "FL-SUNBIZ",
+        "OPENCORPORATES"
+      ],
+      "detail": "Entidade 'Fontana Energy Partners LLC' tem datas de registro/incorporação próximas: 2021-03-15 (FL-SUNBIZ) e 2021-03-15 (OPENCORPORATES) — diferença de 0 dias",
+      "matched_value": "2021-03-15",
+      "confidence": "provavel",
+      "source_ids": [
+        "L21000012345",
+        "us_fl/officer/CEF-2021-001"
+      ]
+    }
+  ],
+  "high_confidence_flags": [
+    "Entidade 'Fontana Energy Partners LLC' aparece em 7 bases distintas: NEWS-BR, NEWS-US, FL-SUNBIZ, DE-CORPS, OPENCORPORATES, LDA, TX-COMPTROLLER (confirmado, 7 fontes: NEWS-BR, NEWS-US, FL-SUNBIZ, DE-CORPS, OPENCORPORATES, LDA, TX-COMPTROLLER)",
+    "Endereço '1209 Orange Street, Wilmington, DE 19801' (ou variação) aparece em 2 bases: OPENCORPORATES, DE-CORPS (provavel, 2 fontes: OPENCORPORATES, DE-CORPS)",
+    "Endereço '1200 Brickell Ave Ste 500, Miami, FL 33131' (ou variação) aparece em 2 bases: FL-SUNBIZ, OPENCORPORATES (provavel, 2 fontes: FL-SUNBIZ, OPENCORPORATES)",
+    "Pessoa 'Carlos Eduardo Fontana' aparece em 2 bases: FL-SUNBIZ, OPENCORPORATES (provavel, 2 fontes: FL-SUNBIZ, OPENCORPORATES)",
+    "Entidade 'Fontana Energy Partners LLC' tem datas de registro/incorporação próximas: 2021-02-28 (DE-CORPS) e 2021-03-15 (FL-SUNBIZ) — diferença de 15 dias (provavel, 2 fontes: DE-CORPS, FL-SUNBIZ)",
+    "Entidade 'Fontana Energy Partners LLC' tem datas de registro/incorporação próximas: 2021-02-28 (DE-CORPS) e 2021-03-15 (OPENCORPORATES) — diferença de 15 dias (provavel, 2 fontes: DE-CORPS, OPENCORPORATES)",
+    "Entidade 'Fontana Energy Partners LLC' tem datas de registro/incorporação próximas: 2021-02-28 (DE-CORPS) e 2021-02-28 (OPENCORPORATES) — diferença de 0 dias (provavel, 2 fontes: DE-CORPS, OPENCORPORATES)",
+    "Entidade 'Fontana Energy Partners LLC' tem datas de registro/incorporação próximas: 2021-02-28 (DE-CORPS) e 2021-03-15 (OPENCORPORATES) — diferença de 15 dias (provavel, 2 fontes: DE-CORPS, OPENCORPORATES)",
+    "Entidade 'Fontana Energy Partners LLC' tem datas de registro/incorporação próximas: 2021-03-15 (FL-SUNBIZ) e 2021-03-15 (OPENCORPORATES) — diferença de 0 dias (provavel, 2 fontes: FL-SUNBIZ, OPENCORPORATES)",
+    "Entidade 'Fontana Energy Partners LLC' tem datas de registro/incorporação próximas: 2021-03-15 (FL-SUNBIZ) e 2021-02-28 (OPENCORPORATES) — diferença de 15 dias (provavel, 2 fontes: FL-SUNBIZ, OPENCORPORATES)",
+    "Entidade 'Fontana Energy Partners LLC' tem datas de registro/incorporação próximas: 2021-03-15 (FL-SUNBIZ) e 2021-03-15 (OPENCORPORATES) — diferença de 0 dias (provavel, 2 fontes: FL-SUNBIZ, OPENCORPORATES)"
+  ],
+  "gaps": [
+    {
+      "base": "FARA",
+      "reason": "no_hits",
+      "detail": "8 variações testadas sem resultado: Carlos Eduardo Fontana, Carlos Fontana, Fontana Carlos, C. E. Fontana, C. Fontana...",
+      "suggested_action": "Verificar manualmente a base FARA com variações adicionais"
+    },
+    {
+      "base": "FEC",
+      "reason": "no_hits",
+      "detail": "11 variações testadas sem resultado: Carlos Eduardo Fontana, Carlos Fontana, Fontana Carlos, C. E. Fontana, C. Fontana...",
+      "suggested_action": "Verificar manualmente a base FEC com variações adicionais"
+    }
+  ],
+  "legal_contexts": [
+    "Delaware incorpora mais de 60% das Fortune 500 e é jurisdição preferida para offshores por proteção de privacidade — nomes de membros/gerentes de LLCs não são divulgados publicamente.",
+    "O registered agent (The Corporation Trust Company) é genérico — praticamente toda offshore usa agentes profissionais em Delaware. Não indica vínculo com a empresa além da incorporação.",
+    "Para identificar os 'ultimate beneficial owners' de uma Delaware LLC é necessário processo judicial ou solicitação à FinCEN sob o Corporate Transparency Act (vigente desde 01/01/2024).",
+    "O Foreign Agents Registration Act (22 U.S.C. § 611 et seq.) exige que agentes de governos estrangeiros se registrem no DOJ. A ausência de registro não exclui atuação — pode indicar que nenhum governo estrangeiro está formalmente envolvido, ou que o registro está pendente (atraso típico de 3-6 meses).",
+    "A Fontana Energy Partners LLC, sendo empresa americana, não seria automaticamente sujeita ao FARA. O registro seria exigido se a empresa agisse em benefício de um principal estrangeiro (ex: Petrobras, governo brasileiro).",
+    "52 U.S.C. § 30121 proíbe estrangeiros não-residentes de contribuírem para campanhas federais americanas. A ausência de registros é o resultado esperado e legalmente coerente para um cidadão brasileiro sem residência permanente nos EUA — não constitui achado negativo.",
+    "Cidadãos brasileiros com green card (LPR) são considerados 'US persons' para fins de doação eleitoral. Se Fontana possuir residência permanente, a ausência seria significativa.",
+    "O Florida Department of State — Division of Corporations publica registros de todas as entidades incorporadas ou qualificadas na Flórida. Registros são públicos conforme Florida Sunshine Laws (F.S. § 119.01).",
+    "A presença de Carlos Eduardo Fontana como Registered Agent e Manager (MGR) confirma controle direto sobre a entidade.",
+    "O Lobbying Disclosure Act (2 U.S.C. § 1601 et seq.) exige que lobbyistas registrem clientes e atividades a cada trimestre. A presença da Fontana Energy Partners LLC como cliente de lobby confirma atividade formal de influência junto ao Congresso e agências regulatórias americanas.",
+    "A contratação de James Whitmore, ex-Deputy Administrator da EPA, como lobbyista é legalmente permitida sob o LDA, mas representa uma revolving door que pode ser relevante para a investigação jornalística.",
+    "OpenCorporates agrega dados de registros corporativos públicos de mais de 140 jurisdições. A presença em múltiplas jurisdições americanas confirma a estrutura corporativa identificada nos registros estaduais individuais.",
+    "O officer search da OpenCorporates usa correspondência exata de nome — variações podem não ser capturadas automaticamente.",
+    "O Texas Secretary of State exige que LLCs estrangeiras (incorporadas em outros estados) se registrem como 'Foreign LLC' para operar no estado. O SIC Code 1311 (Crude Petroleum and Natural Gas) confirma a natureza das operações.",
+    "O endereço registrado em Houston (9800 Richmond Ave) é um centro empresarial que abriga múltiplas empresas — comum para operações de menor escala no setor de energia."
+  ],
+  "next_frontiers": [
+    "Solicitar informações de UBO via Corporate Transparency Act (FinCEN BOI database) — válido para LLCs com receita < USD 5 mi e < 20 funcionários",
+    "Verificar se a Fontana Energy Partners DE tem contratos com o governo federal via USASpending.gov",
+    "Cruzar a data de incorporação em DE (2021-02-28) com a data de registro em FL (2021-03-15) para confirmar sequência: holding DE → operacional FL",
+    "Verificar manualmente em efile.fara.gov — a cobertura da busca automatizada é parcial para registros anteriores a 2016",
+    "Investigar se a Fontana Energy Partners tem contratos diretos com Petrobras, ANP ou qualquer entidade governamental brasileira (tornaria FARA aplicável)",
+    "Verificar a Suprema Corte v. Zakharova para entender o limiar de 'foreign principal' aplicável ao caso",
+    "Verificar se Carlos Eduardo Fontana possui green card ou cidadania americana — se sim, doação seria legal e a ausência seria achado relevante",
+    "Verificar contribuições a PACs independentes (Super PACs) e organizações 501(c)(4), que aceitam doações de estrangeiros em determinadas circunstâncias",
+    "Consultar FEC Schedule B (disbursements) para verificar se algum PAC fez gastos ligados a interesses de Fontana Energy Partners",
+    "Verificar Annual Reports de 2021-2025 para rastrear mudanças de endereço ou de gestores",
+    "Pesquisar por outros registros usando o EIN 87-1234567 em bases de contratos federais (USASpending.gov)",
+    "Verificar se o endereço 1200 Brickell Ave Ste 500 abriga outras empresas sob controle do mesmo gestor",
+    "Solicitar os filings completos via lda.senate.gov (LD-203 e LD-2) para identificar legislação ou regulação específica alvo",
+    "Investigar BrightPath Government Relations LLC: outros clientes do mesmo lobbyista por possíveis conflitos de interesse",
+    "Verificar se James R. Whitmore respeitou o cooling-off period de 1 ano exigido pelo Ethics in Government Act",
+    "Buscar cobertura adicional em Folha de S.Paulo, O Globo, Estadão com variação 'Carlos Fontana' e 'Fontana Energy'",
+    "Verificar cobertura em Agência Pública, The Intercept Brasil, Piauí para possíveis investigações anteriores",
+    "Solicitar acesso ao arquivo do Valor Econômico para artigos pagos via LAI se jornalista tiver credencial de imprensa",
+    "Solicitar registros EPA via FOIA (EPA FOIA portal: epa.gov/foia) sobre a investigação de Clean Water Act mencionada",
+    "Verificar base ECHO (Enforcement and Compliance History Online) da EPA: echo.epa.gov para histórico de violações de Fontana Energy Partners",
+    "Buscar cobertura em Reuters, AP, ProPublica sobre a investigação da refinaria Lone Star Oil Co.",
+    "Expandir busca no OpenCorporates para jurisdições internacionais (Brasil, Cayman Islands, BVI) usando a mesma variação de nome",
+    "Usar a API officer search para buscar Carlos Eduardo Fontana em todas as jurisdições disponíveis",
+    "Verificar se há empresas no Brasil (CNPJ) com o mesmo nome via Receita Federal",
+    "Verificar em Railroad Commission of Texas (rrc.texas.gov) se Fontana Energy Partners tem licenças de poço ou operador",
+    "Investigar o endereço 9800 Richmond Ave, Houston TX: quais outras empresas do setor de energia usam o mesmo endereço",
+    "Cruzar o SIC 1311 com contratos de fornecimento da refinaria investigada (verificar se a refinaria está em TX ou fora)"
+  ]
+}

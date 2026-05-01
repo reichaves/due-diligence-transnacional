@@ -1,0 +1,302 @@
+{
+  "target_name": "Ricardo Andrade Magro",
+  "consolidated_at": "2026-05-01T14:30:00-03:00",
+  "sources_count": 7,
+  "total_hits": 4,
+  "_redaction_notice": "Este arquivo é uma versão sanitizada de um caso real. Campos marcados com [REDACTED] foram removidos ou alterados para proteger PII não essencial à demonstração metodológica.",
+  "findings": [
+    {
+      "base": "FEC",
+      "consulted_at": "2026-05-01T11:00:00-03:00",
+      "queries_executed": 9,
+      "status": "ok",
+      "hits": [],
+      "no_hits": [
+        "Ricardo Andrade Magro",
+        "Ricardo Magro",
+        "Magro Ricardo",
+        "R. A. Magro",
+        "R. Magro",
+        "Magro",
+        "[REDACTED — parentes]"
+      ],
+      "legal_context": [
+        "52 U.S.C. § 30121 proíbe estrangeiros não-residentes de contribuírem para campanhas federais americanas. Ausência esperada para cidadão brasileiro."
+      ],
+      "next_frontiers": [
+        "Verificar status migratório de Ricardo Magro nos EUA",
+        "Consultar FEC Schedule B para gastos de PACs ligados ao setor de logística e combustíveis"
+      ]
+    },
+    {
+      "base": "LDA",
+      "consulted_at": "2026-05-01T11:03:00-03:00",
+      "queries_executed": 9,
+      "status": "ok",
+      "hits": [],
+      "no_hits": [
+        "Ricardo Andrade Magro",
+        "Ricardo Magro",
+        "Magro Ricardo",
+        "R. A. Magro",
+        "R. Magro",
+        "[REDACTED — empresa principal]",
+        "[REDACTED — subsidiária americana]"
+      ],
+      "legal_context": [
+        "A ausência no LDA não exclui atividade de influência — contatos informais e reuniões com congressistas não são registráveis se não houver contrato formal de lobby."
+      ],
+      "next_frontiers": [
+        "Verificar subsidiária americana do Grupo Refit diretamente como cliente no LDA",
+        "Buscar lobbyistas do setor de logistics/fuel supply que podem ter representado interesses do grupo"
+      ]
+    },
+    {
+      "base": "FARA",
+      "consulted_at": "2026-05-01T11:05:00-03:00",
+      "queries_executed": 7,
+      "status": "ok",
+      "hits": [],
+      "no_hits": [
+        "Ricardo Andrade Magro",
+        "Ricardo Magro",
+        "[REDACTED — empresa principal]",
+        "[REDACTED — subsidiária americana]"
+      ],
+      "legal_context": [
+        "Ausência de registro FARA é esperada — FARA se aplica a agentes de governos estrangeiros, não a empresas privadas internacionais atuando por conta própria."
+      ],
+      "next_frontiers": [
+        "Verificar contratos com Petrobras ou ANP que poderiam configurar atuação como foreign principal"
+      ]
+    },
+    {
+      "base": "FL-SUNBIZ",
+      "consulted_at": "2026-05-01T11:08:00-03:00",
+      "queries_executed": 7,
+      "status": "ok",
+      "hits": [
+        {
+          "variation_matched": "[REDACTED — nome da empresa americana]",
+          "match_type": "exact",
+          "source_id": "[REDACTED — document number]",
+          "source_url": "[REDACTED]",
+          "confidence": "confirmado",
+          "raw_record": {
+            "entity_name": "[REDACTED — nome da empresa]",
+            "document_number": "[REDACTED]",
+            "date_filed": "[REDACTED — 2019-20xx]",
+            "state": "FL",
+            "status": "ACTIVE",
+            "registered_agent": "[REDACTED — pessoa física]",
+            "authorized_persons": [
+              {
+                "name": "[REDACTED — sócio com sobrenome Magro]",
+                "title": "MGR",
+                "address": "[REDACTED — Miami, FL]"
+              }
+            ]
+          },
+          "normalized": {
+            "full_name": "[REDACTED — sócio Magro]",
+            "entity_name": "[REDACTED — empresa]",
+            "address": "[REDACTED — Miami, FL]",
+            "state": "FL",
+            "date": "[REDACTED]",
+            "entity_type": "LLC",
+            "role": "manager"
+          }
+        }
+      ],
+      "no_hits": [
+        "Ricardo Andrade Magro",
+        "Ricardo Magro",
+        "R. A. Magro",
+        "R. Magro"
+      ],
+      "legal_context": [
+        "O Florida Sunshine Law (F.S. § 119.01) garante acesso público aos registros corporativos."
+      ],
+      "next_frontiers": [
+        "Verificar Annual Reports da empresa desde a incorporação",
+        "Identificar outros authorized persons listados ao longo dos anos"
+      ]
+    },
+    {
+      "base": "DE-CORPS",
+      "consulted_at": "2026-05-01T11:10:00-03:00",
+      "queries_executed": 5,
+      "status": "ok",
+      "hits": [
+        {
+          "variation_matched": "[REDACTED — nome da holding]",
+          "match_type": "exact",
+          "source_id": "[REDACTED — file number DE]",
+          "source_url": "[REDACTED]",
+          "confidence": "confirmado",
+          "raw_record": {
+            "entity_name": "[REDACTED — holding Delaware]",
+            "file_number": "[REDACTED]",
+            "entity_type": "Limited Liability Company",
+            "incorporation_date": "[REDACTED — 2018-20xx]",
+            "state": "Delaware",
+            "status": "Active",
+            "registered_agent": "The Corporation Trust Company",
+            "registered_office": "1209 Orange Street, Wilmington, DE 19801"
+          },
+          "normalized": {
+            "entity_name": "[REDACTED — holding]",
+            "address": "1209 Orange Street, Wilmington, DE 19801",
+            "state": "DE",
+            "date": "[REDACTED]",
+            "entity_type": "LLC"
+          }
+        }
+      ],
+      "no_hits": [
+        "Ricardo Andrade Magro",
+        "Ricardo Magro",
+        "R. Magro"
+      ],
+      "legal_context": [
+        "Delaware LLC não divulga beneficial owners publicamente — estrutura típica de holding offshore."
+      ],
+      "next_frontiers": [
+        "Solicitar dados de UBO via FinCEN Corporate Transparency Act",
+        "Verificar se a holding DE é a mesma entidade acionista da empresa operacional FL"
+      ]
+    },
+    {
+      "base": "OPENCORPORATES",
+      "consulted_at": "2026-05-01T11:12:00-03:00",
+      "queries_executed": 6,
+      "status": "ok",
+      "hits": [
+        {
+          "variation_matched": "[REDACTED — empresa americana]",
+          "match_type": "exact",
+          "source_id": "us_fl/[REDACTED]",
+          "source_url": "[REDACTED]",
+          "confidence": "confirmado",
+          "raw_record": {
+            "name": "[REDACTED]",
+            "jurisdiction_code": "us_fl",
+            "company_type": "Limited Liability Company",
+            "current_status": "Active",
+            "source": "Florida Division of Corporations"
+          },
+          "normalized": {
+            "entity_name": "[REDACTED]",
+            "state": "FL",
+            "entity_type": "LLC"
+          }
+        }
+      ],
+      "no_hits": [
+        "Ricardo Andrade Magro",
+        "Ricardo Magro",
+        "R. Magro",
+        "Magro"
+      ],
+      "legal_context": [],
+      "next_frontiers": [
+        "Expandir para jurisdições internacionais: Cayman, BVI, Panamá"
+      ]
+    },
+    {
+      "base": "NEWS-BR",
+      "consulted_at": "2026-05-01T11:15:00-03:00",
+      "queries_executed": 8,
+      "status": "ok",
+      "hits": [
+        {
+          "variation_matched": "Ricardo Magro",
+          "match_type": "exact",
+          "source_id": "[REDACTED — outlet e data]",
+          "source_url": "[REDACTED]",
+          "confidence": "provavel",
+          "raw_record": {
+            "outlet": "[REDACTED — veículo de imprensa brasileiro]",
+            "title": "[REDACTED — manchete da reportagem]",
+            "date": "[REDACTED — data da publicação]",
+            "excerpt": "[REDACTED — trecho citando Ricardo Magro no contexto investigativo]"
+          },
+          "normalized": {
+            "full_name": "Ricardo Magro",
+            "date": "[REDACTED]"
+          }
+        }
+      ],
+      "no_hits": [
+        "Ricardo Andrade Magro",
+        "Magro Ricardo",
+        "C. Magro",
+        "[REDACTED — parentes]"
+      ],
+      "legal_context": [],
+      "next_frontiers": [
+        "Buscar reportagens adicionais em arquivo do veículo",
+        "Verificar processo judicial mencionado na cobertura"
+      ]
+    }
+  ],
+  "triangulations": [
+    {
+      "type": "entity_match",
+      "sources": ["FL-SUNBIZ", "DE-CORPS", "OPENCORPORATES"],
+      "detail": "A mesma entidade americana ([REDACTED]) aparece registrada na Flórida, incorporada em Delaware e indexada pelo OpenCorporates — confirma estrutura holding-DE + operacional-FL.",
+      "matched_value": "[REDACTED — nome da empresa]",
+      "confidence": "confirmado",
+      "source_ids": ["[REDACTED-FL]", "[REDACTED-DE]", "us_fl/[REDACTED]"]
+    },
+    {
+      "type": "person_match",
+      "sources": ["FL-SUNBIZ", "NEWS-BR"],
+      "detail": "O sobrenome Magro aparece como gestor/authorized person na empresa Florida e como alvo de reportagem na imprensa brasileira — indicação de que se trata da mesma pessoa.",
+      "matched_value": "[REDACTED — Magro]",
+      "confidence": "provavel",
+      "source_ids": ["[REDACTED-FL-officer]", "[REDACTED-news]"]
+    }
+  ],
+  "high_confidence_flags": [
+    "Empresa americana ([REDACTED]) confirmada em FL-SUNBIZ, DE-CORPS e OPENCORPORATES — presença corporativa nos EUA estabelecida (confirmado, 3 fontes primárias)",
+    "Membro com sobrenome Magro listado como gestor da empresa florida — vínculo de controle (provável, 1 fonte primária + 1 imprensa)"
+  ],
+  "gaps": [
+    {
+      "base": "LDA",
+      "reason": "no_hits",
+      "detail": "Nenhuma variação de nome ou empresa retornou resultado no Senate LDA Disclosure Database",
+      "suggested_action": "Buscar manualmente lobbyistas do setor de logistics/fuel com clientes brasileiros em 2019-2024"
+    },
+    {
+      "base": "FARA",
+      "reason": "no_hits",
+      "detail": "Ausência esperada — FARA se aplica a agentes de governos estrangeiros",
+      "suggested_action": "Verificar contratos com entes governamentais brasileiros (Petrobras, ANP)"
+    },
+    {
+      "base": "TX-COMPTROLLER",
+      "reason": "not_searched",
+      "detail": "Texas não estava nas bases prioritárias — investigação focou em FL/DE onde empresa foi identificada",
+      "suggested_action": "Executar search-state-corps para TX se confirmadas operações no estado"
+    },
+    {
+      "base": "NEWS-US",
+      "reason": "no_hits",
+      "detail": "Imprensa americana não retornou menção ao alvo ou à empresa",
+      "suggested_action": "Buscar no arquivo do Houston Chronicle e Bloomberg Law com variações da empresa"
+    }
+  ],
+  "legal_contexts": [
+    "52 U.S.C. § 30121 proíbe estrangeiros não-residentes de contribuírem para campanhas federais americanas.",
+    "Delaware LLC não divulga beneficial owners publicamente — Corporate Transparency Act (2024) pode mudar esse cenário.",
+    "O Foreign Agents Registration Act (22 U.S.C. § 611) se aplica a agentes de governos estrangeiros, não a empresas privadas internacionais atuando por conta própria."
+  ],
+  "next_frontiers": [
+    "Solicitar dados de UBO via FinCEN Corporate Transparency Act para a holding Delaware",
+    "Verificar contratos com entes governamentais brasileiros que configurariam FARA",
+    "Executar FOIA na EPA sobre investigações ambientais relacionadas à empresa",
+    "Buscar conexões com o setor financeiro: verificar se alguma das entidades emitiu bonds ou foi parte em operações com bancos americanos regulados"
+  ]
+}

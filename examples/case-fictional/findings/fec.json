@@ -1,0 +1,30 @@
+{
+  "base": "FEC",
+  "consulted_at": "2026-05-01T10:05:00-03:00",
+  "queries_executed": 11,
+  "status": "ok",
+  "hits": [],
+  "no_hits": [
+    "Carlos Eduardo Fontana",
+    "Carlos Fontana",
+    "Fontana Carlos",
+    "C. E. Fontana",
+    "C. Fontana",
+    "Fontana",
+    "C.E. Fontana",
+    "Mariana Silva Fontana",
+    "Roberto Fontana",
+    "Fontana Energy Partners",
+    "Fontana Energy Partners LLC"
+  ],
+  "legal_context": [
+    "52 U.S.C. § 30121 proíbe estrangeiros não-residentes de contribuírem para campanhas federais americanas. A ausência de registros é o resultado esperado e legalmente coerente para um cidadão brasileiro sem residência permanente nos EUA — não constitui achado negativo.",
+    "Cidadãos brasileiros com green card (LPR) são considerados 'US persons' para fins de doação eleitoral. Se Fontana possuir residência permanente, a ausência seria significativa."
+  ],
+  "next_frontiers": [
+    "Verificar se Carlos Eduardo Fontana possui green card ou cidadania americana — se sim, doação seria legal e a ausência seria achado relevante",
+    "Verificar contribuições a PACs independentes (Super PACs) e organizações 501(c)(4), que aceitam doações de estrangeiros em determinadas circunstâncias",
+    "Consultar FEC Schedule B (disbursements) para verificar se algum PAC fez gastos ligados a interesses de Fontana Energy Partners"
+  ],
+  "methodology_note": "Buscas realizadas via MCP fec-finance:search_contributions. Cobertura: ciclos eleitorais 2018-2024. Campos consultados: contributor_name (todas as variações), contributor_employer (Fontana Energy Partners LLC). Sem filtro de estado."
+}

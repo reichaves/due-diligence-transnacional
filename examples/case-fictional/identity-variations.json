@@ -1,0 +1,64 @@
+{
+  "target_name": "Carlos Eduardo Fontana",
+  "generated_at": "2026-05-01T10:00:00+00:00",
+  "approved_by_human": true,
+  "approved_at": "2026-05-01T10:01:30+00:00",
+  "approved_by": "journalist-demo",
+  "variations": [
+    {
+      "variation": "Carlos Eduardo Fontana",
+      "type": "full_name",
+      "note": "Nome completo conforme fornecido"
+    },
+    {
+      "variation": "Carlos Fontana",
+      "type": "first_last",
+      "note": "Primeiro nome + último sobrenome, sem acentos"
+    },
+    {
+      "variation": "Fontana Carlos",
+      "type": "last_first",
+      "note": "Ordem invertida (sobrenome, nome) — comum em formulários americanos"
+    },
+    {
+      "variation": "C. E. Fontana",
+      "type": "initials_last",
+      "note": "Todas as iniciais + último sobrenome"
+    },
+    {
+      "variation": "C. Fontana",
+      "type": "initials_last",
+      "note": "Primeira inicial + último sobrenome"
+    },
+    {
+      "variation": "Fontana",
+      "type": "surname_only",
+      "note": "Sobrenome isolado — busca ampla, alto ruído; verificar manualmente"
+    },
+    {
+      "variation": "C.E. Fontana",
+      "type": "alias",
+      "note": "Apelido ou nome alternativo fornecido pelo usuário"
+    },
+    {
+      "variation": "Carlos Fontana",
+      "type": "alias",
+      "note": "Apelido conforme consta em contrato de fornecimento"
+    },
+    {
+      "variation": "Mariana Silva Fontana",
+      "type": "relative",
+      "note": "Conjuge: Mariana Silva Fontana"
+    },
+    {
+      "variation": "Fontana",
+      "type": "relative",
+      "note": "Conjuge sobrenome isolado: Fontana"
+    },
+    {
+      "variation": "Roberto Fontana",
+      "type": "relative",
+      "note": "Pai: Roberto Fontana"
+    }
+  ]
+}

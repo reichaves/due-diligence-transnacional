@@ -1,0 +1,43 @@
+{
+  "base": "NEWS-US",
+  "consulted_at": "2026-05-01T10:21:00-03:00",
+  "queries_executed": 8,
+  "status": "ok",
+  "hits": [
+    {
+      "variation_matched": "Fontana Energy Partners",
+      "match_type": "exact",
+      "source_id": "HCHRON-20240203-EPA-001",
+      "source_url": "https://www.houstonchronicle.com/business/energy/article/epa-texas-refineries-water-discharge-2024-001",
+      "confidence": "indicio",
+      "raw_record": {
+        "outlet": "Houston Chronicle",
+        "title": "EPA investigates three Texas refineries over water discharge violations",
+        "date": "2024-02-03",
+        "author": "[redacted para caso fictício]",
+        "excerpt": "Among the companies under EPA scrutiny for alleged Clean Water Act violations is Fontana Energy Partners LLC, a Delaware-registered firm with refinery supply operations in the Gulf Coast region. The company did not respond to requests for comment.",
+        "section": "Business/Energy"
+      },
+      "normalized": {
+        "entity_name": "Fontana Energy Partners LLC",
+        "date": "2024-02-03"
+      }
+    }
+  ],
+  "no_hits": [
+    "Carlos Eduardo Fontana",
+    "Carlos Fontana",
+    "Fontana Carlos",
+    "C. E. Fontana",
+    "C. Fontana",
+    "Roberto Fontana",
+    "Mariana Silva Fontana"
+  ],
+  "legal_context": [],
+  "next_frontiers": [
+    "Solicitar registros EPA via FOIA (EPA FOIA portal: epa.gov/foia) sobre a investigação de Clean Water Act mencionada",
+    "Verificar base ECHO (Enforcement and Compliance History Online) da EPA: echo.epa.gov para histórico de violações de Fontana Energy Partners",
+    "Buscar cobertura em Reuters, AP, ProPublica sobre a investigação da refinaria Lone Star Oil Co."
+  ],
+  "methodology_note": "Buscas via Google News, ProPublica Nerds API, Reuters Archive. Outlets monitorados: NYT, Washington Post, Wall Street Journal, Houston Chronicle, AP, Reuters, Bloomberg Law, ProPublica. Cobertura: 2015-2026."
+}

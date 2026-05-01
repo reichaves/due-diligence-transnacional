@@ -1,0 +1,27 @@
+{
+  "base": "FARA",
+  "consulted_at": "2026-05-01T10:09:00-03:00",
+  "queries_executed": 8,
+  "status": "ok",
+  "hits": [],
+  "no_hits": [
+    "Carlos Eduardo Fontana",
+    "Carlos Fontana",
+    "Fontana Carlos",
+    "C. E. Fontana",
+    "C. Fontana",
+    "Fontana Energy Partners",
+    "Fontana Energy Partners LLC",
+    "Fontana"
+  ],
+  "legal_context": [
+    "O Foreign Agents Registration Act (22 U.S.C. § 611 et seq.) exige que agentes de governos estrangeiros se registrem no DOJ. A ausência de registro não exclui atuação — pode indicar que nenhum governo estrangeiro está formalmente envolvido, ou que o registro está pendente (atraso típico de 3-6 meses).",
+    "A Fontana Energy Partners LLC, sendo empresa americana, não seria automaticamente sujeita ao FARA. O registro seria exigido se a empresa agisse em benefício de um principal estrangeiro (ex: Petrobras, governo brasileiro)."
+  ],
+  "next_frontiers": [
+    "Verificar manualmente em efile.fara.gov — a cobertura da busca automatizada é parcial para registros anteriores a 2016",
+    "Investigar se a Fontana Energy Partners tem contratos diretos com Petrobras, ANP ou qualquer entidade governamental brasileira (tornaria FARA aplicável)",
+    "Verificar a Suprema Corte v. Zakharova para entender o limiar de 'foreign principal' aplicável ao caso"
+  ],
+  "methodology_note": "Buscas realizadas via efile.fara.gov/api/v1/search e scraping da interface pública. Cobertura: 1941-2024 (registros digitalizados). Limitação: registros pré-1995 têm cobertura parcial."
+}

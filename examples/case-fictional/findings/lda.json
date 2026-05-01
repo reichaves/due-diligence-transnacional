@@ -1,0 +1,91 @@
+{
+  "base": "LDA",
+  "consulted_at": "2026-05-01T10:07:00-03:00",
+  "queries_executed": 8,
+  "status": "ok",
+  "hits": [
+    {
+      "variation_matched": "Fontana Energy Partners LLC",
+      "match_type": "exact",
+      "source_id": "LDA-2023-Q3-BPGR-0042",
+      "source_url": "https://lda.senate.gov/filings/public/filing/LDA-2023-Q3-BPGR-0042/",
+      "confidence": "confirmado",
+      "raw_record": {
+        "registrant_name": "BrightPath Government Relations LLC",
+        "registrant_id": "BPGR-10045",
+        "client_name": "Fontana Energy Partners LLC",
+        "client_id": "CLIENT-FEP-2023",
+        "filing_period": "2023 Mid-Year (Q3)",
+        "filing_type": "LD-2 Quarterly Activity Report",
+        "income_amount": "20000",
+        "general_issue_area_code": "ENE",
+        "issue_description": "Energy regulations; Texas refinery operating permits; EPA Clean Water Act compliance for Gulf Coast operations; Department of Energy offshore production incentives",
+        "government_entities_contacted": [
+          "House Committee on Energy and Commerce",
+          "Senate Committee on Environment and Public Works",
+          "U.S. Environmental Protection Agency (EPA)",
+          "Department of Energy (DOE)"
+        ],
+        "lobbyists": [
+          {"name": "James R. Whitmore", "covered_official_position": "Former EPA Deputy Administrator"}
+        ]
+      },
+      "normalized": {
+        "entity_name": "Fontana Energy Partners LLC",
+        "date": "2023-07-01",
+        "amount_usd": 20000,
+        "role": "client"
+      }
+    },
+    {
+      "variation_matched": "Fontana Energy Partners LLC",
+      "match_type": "exact",
+      "source_id": "LDA-2023-Q4-BPGR-0051",
+      "source_url": "https://lda.senate.gov/filings/public/filing/LDA-2023-Q4-BPGR-0051/",
+      "confidence": "confirmado",
+      "raw_record": {
+        "registrant_name": "BrightPath Government Relations LLC",
+        "registrant_id": "BPGR-10045",
+        "client_name": "Fontana Energy Partners LLC",
+        "client_id": "CLIENT-FEP-2023",
+        "filing_period": "2023 Year-End (Q4)",
+        "filing_type": "LD-2 Quarterly Activity Report",
+        "income_amount": "20000",
+        "general_issue_area_code": "ENE",
+        "issue_description": "Energy regulations; Texas refinery operating permits; EPA Clean Water Act compliance",
+        "government_entities_contacted": [
+          "U.S. Environmental Protection Agency (EPA)",
+          "Texas Commission on Environmental Quality (TCEQ)"
+        ],
+        "lobbyists": [
+          {"name": "James R. Whitmore", "covered_official_position": "Former EPA Deputy Administrator"}
+        ]
+      },
+      "normalized": {
+        "entity_name": "Fontana Energy Partners LLC",
+        "date": "2023-10-01",
+        "amount_usd": 20000,
+        "role": "client"
+      }
+    }
+  ],
+  "no_hits": [
+    "Carlos Eduardo Fontana",
+    "Carlos Fontana",
+    "Fontana Carlos",
+    "C. E. Fontana",
+    "C. Fontana",
+    "Mariana Silva Fontana",
+    "Roberto Fontana"
+  ],
+  "legal_context": [
+    "O Lobbying Disclosure Act (2 U.S.C. § 1601 et seq.) exige que lobbyistas registrem clientes e atividades a cada trimestre. A presença da Fontana Energy Partners LLC como cliente de lobby confirma atividade formal de influência junto ao Congresso e agências regulatórias americanas.",
+    "A contratação de James Whitmore, ex-Deputy Administrator da EPA, como lobbyista é legalmente permitida sob o LDA, mas representa uma revolving door que pode ser relevante para a investigação jornalística."
+  ],
+  "next_frontiers": [
+    "Solicitar os filings completos via lda.senate.gov (LD-203 e LD-2) para identificar legislação ou regulação específica alvo",
+    "Investigar BrightPath Government Relations LLC: outros clientes do mesmo lobbyista por possíveis conflitos de interesse",
+    "Verificar se James R. Whitmore respeitou o cooling-off period de 1 ano exigido pelo Ethics in Government Act"
+  ],
+  "methodology_note": "Buscas realizadas via lda.senate.gov/api/v1/filings. Cobertura: 2008-2024. Campos consultados: client_name (variações do alvo e da empresa principal)."
+}

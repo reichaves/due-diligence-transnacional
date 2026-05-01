@@ -1,0 +1,45 @@
+{
+  "base": "NEWS-BR",
+  "consulted_at": "2026-05-01T10:19:00-03:00",
+  "queries_executed": 8,
+  "status": "ok",
+  "hits": [
+    {
+      "variation_matched": "Carlos Fontana",
+      "match_type": "exact",
+      "source_id": "VALOR-20231115-FEP-001",
+      "source_url": "https://valor.globo.com/empresas/noticia/2023/11/15/empresa-de-energia-expande-texas.ghtml",
+      "confidence": "provavel",
+      "raw_record": {
+        "outlet": "Valor Econômico",
+        "title": "Empresa de energia com sede em Delaware expande operações no Texas",
+        "date": "2023-11-15",
+        "author": "[redacted para caso fictício]",
+        "excerpt": "A Fontana Energy Partners LLC, controlada pelo empresário paulistano Carlos Fontana, assinou contrato de fornecimento com a refinaria Lone Star Oil Co., confirmou a empresa em nota. A companhia está registrada em Delaware e mantém escritório operacional em Houston.",
+        "section": "Empresas"
+      },
+      "normalized": {
+        "full_name": "Carlos Fontana",
+        "entity_name": "Fontana Energy Partners LLC",
+        "date": "2023-11-15",
+        "role": "controlador"
+      }
+    }
+  ],
+  "no_hits": [
+    "Carlos Eduardo Fontana",
+    "Fontana Carlos",
+    "C. E. Fontana",
+    "C. Fontana",
+    "Fontana Energy Partners",
+    "Mariana Silva Fontana",
+    "Roberto Fontana"
+  ],
+  "legal_context": [],
+  "next_frontiers": [
+    "Buscar cobertura adicional em Folha de S.Paulo, O Globo, Estadão com variação 'Carlos Fontana' e 'Fontana Energy'",
+    "Verificar cobertura em Agência Pública, The Intercept Brasil, Piauí para possíveis investigações anteriores",
+    "Solicitar acesso ao arquivo do Valor Econômico para artigos pagos via LAI se jornalista tiver credencial de imprensa"
+  ],
+  "methodology_note": "Buscas via Google News API e busca direta em portais: Folha, Estadão, Globo, Valor, Intercept Brasil, Agência Pública, Revista Piauí. Cobertura aproximada: 2010-2026. Limitação: conteúdo atrás de paywall não foi recuperado integralmente."
+}

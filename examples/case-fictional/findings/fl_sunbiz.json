@@ -1,0 +1,65 @@
+{
+  "base": "FL-SUNBIZ",
+  "consulted_at": "2026-05-01T10:11:00-03:00",
+  "queries_executed": 7,
+  "status": "ok",
+  "hits": [
+    {
+      "variation_matched": "Fontana Energy Partners LLC",
+      "match_type": "exact",
+      "source_id": "L21000012345",
+      "source_url": "https://search.sunbiz.org/Inquiry/CorporationSearch/SearchResultDetail?inquirytype=EntityName&directionType=Initial&searchNameOrder=FONTANAENERGYPARTNERS&aggregateId=flal-l21000012345-12a34b56",
+      "confidence": "confirmado",
+      "raw_record": {
+        "entity_name": "Fontana Energy Partners LLC",
+        "document_number": "L21000012345",
+        "fei_ein_number": "87-1234567",
+        "date_filed": "2021-03-15",
+        "state": "FL",
+        "status": "ACTIVE",
+        "last_event": "ANNUAL REPORT",
+        "last_event_date": "2025-04-01",
+        "principal_address": "1200 Brickell Ave Ste 500, Miami, FL 33131",
+        "mailing_address": "1200 Brickell Ave Ste 500, Miami, FL 33131",
+        "registered_agent": {
+          "name": "Carlos Eduardo Fontana",
+          "address": "1200 Brickell Ave Ste 500, Miami, FL 33131"
+        },
+        "authorized_persons": [
+          {
+            "name": "Carlos Eduardo Fontana",
+            "title": "MGR",
+            "address": "1200 Brickell Ave Ste 500, Miami, FL 33131"
+          }
+        ]
+      },
+      "normalized": {
+        "full_name": "Carlos Eduardo Fontana",
+        "entity_name": "Fontana Energy Partners LLC",
+        "address": "1200 Brickell Ave Ste 500, Miami, FL 33131",
+        "state": "FL",
+        "date": "2021-03-15",
+        "entity_type": "LLC",
+        "role": "registered_agent"
+      }
+    }
+  ],
+  "no_hits": [
+    "Carlos Eduardo Fontana",
+    "Carlos Fontana",
+    "C. E. Fontana",
+    "C. Fontana",
+    "Mariana Silva Fontana",
+    "Roberto Fontana"
+  ],
+  "legal_context": [
+    "O Florida Department of State — Division of Corporations publica registros de todas as entidades incorporadas ou qualificadas na Flórida. Registros são públicos conforme Florida Sunshine Laws (F.S. § 119.01).",
+    "A presença de Carlos Eduardo Fontana como Registered Agent e Manager (MGR) confirma controle direto sobre a entidade."
+  ],
+  "next_frontiers": [
+    "Verificar Annual Reports de 2021-2025 para rastrear mudanças de endereço ou de gestores",
+    "Pesquisar por outros registros usando o EIN 87-1234567 em bases de contratos federais (USASpending.gov)",
+    "Verificar se o endereço 1200 Brickell Ave Ste 500 abriga outras empresas sob controle do mesmo gestor"
+  ],
+  "methodology_note": "Busca via Sunbiz Entity Name Search (search.sunbiz.org). Cobertura: todas as entidades ativas e inativas com registro na Flórida."
+}

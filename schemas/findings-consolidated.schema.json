@@ -1,0 +1,122 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/reichaves/due-diligence-transnacional/schemas/findings-consolidated.schema.json",
+  "title": "FindingsConsolidated",
+  "description": "Output da skill triangulate-findings: achados cruzados de múltiplas bases com triangulações e lacunas",
+  "type": "object",
+  "required": ["target_name", "consolidated_at", "sources_count", "findings", "triangulations", "gaps"],
+  "additionalProperties": false,
+  "properties": {
+    "target_name": {
+      "type": "string",
+      "minLength": 2,
+      "description": "Nome completo do alvo conforme target.yaml"
+    },
+    "consolidated_at": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Timestamp ISO 8601 da consolidação"
+    },
+    "sources_count": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "Número de bases consultadas (arquivos de findings carregados)"
+    },
+    "total_hits": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "Total de hits somados em todas as bases"
+    },
+    "findings": {
+      "type": "array",
+      "description": "Array com o findings.json completo de cada base consultada",
+      "items": {
+        "type": "object",
+        "description": "Objeto de findings conforme findings.schema.json"
+      }
+    },
+    "triangulations": {
+      "type": "array",
+      "description": "Cruzamentos identificados entre duas ou mais bases",
+      "items": {
+        "type": "object",
+        "required": ["type", "sources", "detail", "confidence"],
+        "additionalProperties": false,
+        "properties": {
+          "type": {
+            "type": "string",
+            "enum": ["address_match", "entity_match", "person_match", "date_match"],
+            "description": "Tipo de coincidência detectada"
+          },
+          "sources": {
+            "type": "array",
+            "minItems": 2,
+            "items": { "type": "string" },
+            "description": "Bases envolvidas na triangulação"
+          },
+          "detail": {
+            "type": "string",
+            "description": "Descrição do cruzamento — o que coincidiu e em que campos"
+          },
+          "matched_value": {
+            "type": "string",
+            "description": "Valor exato que coincidiu (endereço, nome de entidade, etc.)"
+          },
+          "confidence": {
+            "type": "string",
+            "enum": ["confirmado", "provavel", "indicio"],
+            "description": "Nível de confiança da triangulação"
+          },
+          "source_ids": {
+            "type": "array",
+            "items": { "type": "string" },
+            "description": "IDs dos registros fonte em cada base"
+          }
+        }
+      }
+    },
+    "high_confidence_flags": {
+      "type": "array",
+      "description": "Achados confirmados por ≥2 fontes primárias — usados no resumo executivo",
+      "items": { "type": "string" }
+    },
+    "gaps": {
+      "type": "array",
+      "description": "Bases sem achados ou com erro — lacunas documentadas",
+      "items": {
+        "type": "object",
+        "required": ["base", "reason"],
+        "additionalProperties": false,
+        "properties": {
+          "base": {
+            "type": "string",
+            "description": "Identificador da base (ex: FARA, FEC)"
+          },
+          "reason": {
+            "type": "string",
+            "enum": ["no_hits", "error", "not_searched", "partial"],
+            "description": "Motivo da lacuna"
+          },
+          "detail": {
+            "type": "string",
+            "description": "Explicação adicional (variações testadas, mensagem de erro)"
+          },
+          "suggested_action": {
+            "type": "string",
+            "description": "Ação manual sugerida para preencher a lacuna"
+          }
+        }
+      }
+    },
+    "legal_contexts": {
+      "type": "array",
+      "description": "Contextos legais agregados de todas as bases",
+      "items": { "type": "string" }
+    },
+    "next_frontiers": {
+      "type": "array",
+      "description": "Próximas frentes de investigação agregadas de todas as bases",
+      "items": { "type": "string" }
+    }
+  }
+}
