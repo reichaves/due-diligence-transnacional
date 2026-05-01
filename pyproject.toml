@@ -22,6 +22,7 @@ dependencies = [
     "pydantic>=2.7",
     "python-dotenv>=1.0",
     "requests>=2.31",
+    "beautifulsoup4>=4.12",
     "jsonschema>=4.22",
     "pyyaml>=6.0",
     "reportlab>=4.1",
