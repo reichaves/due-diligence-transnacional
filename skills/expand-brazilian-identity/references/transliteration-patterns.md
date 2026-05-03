@@ -39,7 +39,7 @@ Sobrenomes brasileiros compostos são frequentemente truncados ou hifenizados:
 
 | Sobrenome BR | Variações em formulários EUA |
 |---|---|
-| Andrade Magro | Andrade-Magro / Magro / Andrade |
+| Andrade Ferreira | Andrade-Ferreira / Ferreira / Andrade |
 | da Costa Silva | Da Costa / Costa Silva / Silva / Dacosta |
 | de Oliveira | Oliveira / De Oliveira / DeOliveira |
 
@@ -73,7 +73,7 @@ somente se houver evidência de que o alvo usa essa versão — não presumir.
 
 Abreviações de nome médio são comuns em documentos americanos:
 
-- "Ricardo Andrade Magro" → "Ricardo A. Magro" → "R. A. Magro" → "R. Magro"
+- "Carlos Eduardo Ferreira" → "Ricardo A. Ferreira" → "C. E. Ferreira" → "C. Ferreira"
 - FEC e FARA frequentemente usam "first + initial + last"
 
 ## Erros tipográficos frequentes
@@ -82,7 +82,7 @@ Erros documentados em bases reais (observados em FEC Schedule A):
 
 | Original | Erro tipográfico |
 |---|---|
-| Magro | Maggro / Margo / Magrao |
+| Ferreira | Maggro / Margo / Magrao |
 | Souza | Sousa / Souza / Soza |
 | Pereira | Perreria / Perreira |
 | Gonçalves | Goncalves / Gonczalves |

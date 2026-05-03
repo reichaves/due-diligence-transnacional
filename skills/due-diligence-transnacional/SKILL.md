@@ -1,15 +1,16 @@
 ---
 name: due-diligence-transnacional
 description: >
-  Orquestra investigação de due diligence de pessoa física brasileira em
-  bases públicas americanas (FEC, LDA, FARA, registros corporativos
-  estaduais, OpenCorporates, imprensa). Use quando o usuário pedir para
-  investigar, fazer due diligence, "checar" ou "rastrear" alguém em bases
-  americanas; quando mencionar nomes brasileiros que possam ter atividade
-  nos EUA (offshores, doações, lobby, refinarias, real estate em Miami);
-  ou quando pedir um dossiê estruturado a partir de um nome. Aciona
-  sub-skills especializadas e produz PDF final com fontes citadas e
-  níveis de confiança.
+  Orquestra investigação de due diligence de pessoa física em bases públicas
+  americanas (FEC, LDA, FARA, registros corporativos estaduais,
+  OpenCorporates, imprensa). Otimizado para alvos brasileiros; suporta
+  qualquer nacionalidade quando o alvo possui vínculo com os EUA. Use quando
+  o usuário pedir para investigar, fazer due diligence, "checar" ou
+  "rastrear" alguém em bases americanas; quando mencionar nomes
+  latino-americanos com possível atividade nos EUA (offshores, doações,
+  lobby, refinarias, real estate em Miami); ou quando pedir um dossiê
+  estruturado a partir de um nome. Aciona sub-skills especializadas e
+  produz PDF final com fontes citadas e níveis de confiança.
 ---
 
 # Due Diligence Transnacional — Orquestrador
@@ -25,7 +26,7 @@ Ative quando o usuário disser algo como:
 
 ## Quando NÃO ativar
 
-- Investigação em jurisdição que não seja EUA → use outras skills
+- Alvo sem nenhum vínculo documentado com os EUA → pipeline não terá resultados
 - OSINT visual (foto, vídeo) → use `osint-investigation`
 - Pessoa sem relevância pública → recusar e explicar (vide `references/ethical-guardrails.md`)
 
@@ -67,8 +68,8 @@ Para cada base na lista de prioridades, dispare a sub-skill correspondente
 | Imprensa BR + EUA          | `search-news-archive`      |
 
 Cada sub-skill recebe `identity-variations.json` e produz
-`findings/<base>.json`. Use sub-agentes para isolar contexto — segue o
-princípio do Módulo 4 do curso (*"sub-agent tasks must stay narrowly scoped"*).
+`findings/<base>.json`. Use sub-agentes para isolar contexto — cada sub-skill
+roda com escopo estreito e contexto independente.
 
 ### Estágio 4 — Triangular achados
 
@@ -98,6 +99,24 @@ Estrutura do dossiê (vide `templates/dossier_template.py`):
 7. Lacunas e próximas frentes
 8. Contexto legal aplicável (§ 30121 etc.)
 9. Apêndice com timestamps de todas as consultas
+
+## Ferramentas MCP disponíveis
+
+Antes de disparar sub-skills, verifique quais MCP servers estão ativos nesta sessão.
+A presença de ferramentas MCP muda como as sub-skills executam as buscas.
+
+| MCP server | Ferramentas-chave | Impacto |
+|------------|------------------|---------|
+| `fec-mcp` | `mcp__fec-mcp__search_contributions` e outros | Sub-skill `search-fec` opera em Nível 1 (direto, estruturado) |
+| `osint-investigation` | `mcp__osint-investigation__*` | Sub-skill `search-fec` opera em Nível 2; outras sub-skills ganham capacidade OSINT adicional |
+| Nenhum | — | Sub-skills usam scripts Python como fallback (Nível 3) |
+
+**Ao iniciar cada sub-agente, informe explicitamente quais MCP tools estão
+disponíveis.** Isso permite que a sub-skill escolha o nível de execução correto
+sem precisar re-detectar.
+
+Instruções de instalação dos servidores MCP em `docs/setup.md` →
+"Ferramentas opcionais (MCP)".
 
 ## Princípios para o orquestrador
 

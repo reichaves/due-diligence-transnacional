@@ -142,7 +142,7 @@ class TestLdaRunSearch:
         assert result["base"] == "LDA"
 
     def test_no_hits_populated_when_empty(self, lda_module: ModuleType) -> None:
-        variations = ["Ricardo Magro", "R. Magro"]
+        variations = ["Carlos Ferreira", "C. Ferreira"]
         with patch.object(lda_module, "_get_paginated", return_value=[]):
             with patch.object(lda_module, "_build_session", return_value=MagicMock()):
                 result = lda_module.run_search(variations)
@@ -158,11 +158,11 @@ class TestLdaRunSearch:
         }
         with patch.object(lda_module, "_get_paginated", side_effect=[[mock_filing], []]):
             with patch.object(lda_module, "_build_session", return_value=MagicMock()):
-                result = lda_module.run_search(["Ricardo Magro"])
+                result = lda_module.run_search(["Carlos Ferreira"])
         assert len(result["hits"]) == 1
         hit = result["hits"][0]
         assert hit["source_id"] == "abc-123-def"
-        assert hit["variation_matched"] == "Ricardo Magro"
+        assert hit["variation_matched"] == "Carlos Ferreira"
         assert "source_url" in hit
 
     def test_legal_context_is_non_empty(self, lda_module: ModuleType) -> None:
@@ -248,7 +248,7 @@ class TestOpenCorporatesRunSearch:
 
     def test_offshore_flag_added_to_next_frontiers(self, oc_module: ModuleType) -> None:
         mock_officer = {
-            "name": "RICARDO MAGRO",
+            "name": "CARLOS FERREIRA",
             "position": "director",
             "start_date": "2020-01-01",
             "end_date": None,
@@ -261,7 +261,7 @@ class TestOpenCorporatesRunSearch:
         }
         with patch.object(oc_module, "_search_officers", return_value=[mock_officer]):
             with patch.object(oc_module, "_build_session", return_value=MagicMock()):
-                result = oc_module.run_search(["Ricardo Magro"])
+                result = oc_module.run_search(["Carlos Ferreira"])
 
         frontiers_text = " ".join(result["next_frontiers"])
         assert "offshore" in frontiers_text.lower() or "ALERTA" in frontiers_text

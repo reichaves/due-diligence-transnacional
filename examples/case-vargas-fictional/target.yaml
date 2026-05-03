@@ -1,0 +1,42 @@
+# Fictional case for didactic use — all data is synthetic
+# This case demonstrates a clean investigation (no US presence found).
+# It also illustrates use of origin_country for non-Brazilian targets.
+
+nome_completo: "Pablo Vargas Mendoza"
+
+ocupacao: "Gerente-Geral"
+empresa_principal: "Vargas Energia S.A."
+
+# origin_country: ISO 3166-1 alpha-2 code of the target's home country.
+# Used by search-news-archive to include relevant national outlets.
+# Supported: any country — outlets for BR and US are pre-configured;
+# for others, the skill performs a generic web search.
+origin_country: "PE"
+
+cidade_residencia: "Lima"
+
+parentes:
+  - nome: "Carmen Lucía Vargas"
+    relacao: "conjuge"
+  - nome: "Rodrigo Vargas Salaverry"
+    relacao: "pai"
+
+apelidos:
+  - "Pablo Vargas"
+  - "P. Vargas Mendoza"
+
+razao_investigativa: >
+  Pablo Vargas Mendoza é gerente-geral da Vargas Energia S.A., empresa peruana
+  do setor de petróleo e gás com contratos com a Petroperú. Em 2023, a empresa
+  anunciou planos de expansão para o mercado norte-americano e registrou uma
+  subsidiária nos EUA (Vargas Energy USA LLC). O objetivo é verificar se Vargas
+  ou a subsidiária americana aparecem em registros de lobby, doações eleitorais,
+  agente estrangeiro ou registros corporativos estaduais americanos.
+  Este é um caso fictício didático — nenhum dado real foi usado.
+
+bases_prioritarias:
+  - fec
+  - lda-fara
+  - state-corps
+  - opencorporates
+  - news

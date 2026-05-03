@@ -1,13 +1,14 @@
 #!/usr/bin/env python3
 """
-Purpose: Generate name variations for a Brazilian target for use in US database searches.
+Purpose: Generate name variations for a target of any nationality for use in US database searches.
 Author:  Reinaldo Chaves <reichaves@gmail.com>
 Date:    2026-04-30
 Dependencies: click>=8.1 (see pyproject.toml)
 
 Usage:
-    python expand_identity.py --name "Ricardo Andrade Magro"
+    python expand_identity.py --name "Carlos Eduardo Ferreira"
     python expand_identity.py --name "João Silva" --alias "John Silva" --approved
+    python expand_identity.py --name "Pablo Vargas Mendoza" --origin-country PE
     python expand_identity.py --name "Maria Souza" \
         --relatives '[{"nome": "Pedro Souza", "relacao": "conjuge"}]' \
         --output variations.json
@@ -136,7 +137,7 @@ def build_variations(
 
         # 5. Initials + last name
         if len(parts_no_acc) > 2:
-            # All initials except last part: "R. A. Magro"
+            # All initials except last part: "C. E. Ferreira"
             initials_all = ". ".join(p[0] for p in parts_no_acc[:-1]) + "."
             variations.append(
                 {
@@ -146,7 +147,7 @@ def build_variations(
                 }
             )
 
-        # First initial + last name only: "R. Magro"
+        # First initial + last name only: "C. Ferreira"
         variations.append(
             {
                 "variation": f"{first_no[0]}. {last_no}",
@@ -235,7 +236,7 @@ def build_output(
 @click.option(
     "--name",
     required=True,
-    help="Nome completo do alvo (ex: 'Ricardo Andrade Magro')",
+    help="Nome completo do alvo (ex: 'Carlos Eduardo Ferreira')",
 )
 @click.option(
     "--alias",
@@ -246,7 +247,15 @@ def build_output(
 @click.option(
     "--relatives",
     default=None,
-    help='JSON com parentes: \'[{"nome": "Ana Magro", "relacao": "conjuge"}]\'',
+    help='JSON com parentes: \'[{"nome": "Carla Ferreira", "relacao": "conjuge"}]\'',
+)
+@click.option(
+    "--origin-country",
+    "origin_country",
+    default="BR",
+    show_default=True,
+    help="País de origem do alvo (ISO 3166-1 alpha-2, ex: BR, PE, CO, AR, MX). "
+    "Afeta apenas mensagens de log — o algoritmo de variações é genérico.",
 )
 @click.option(
     "--output",
@@ -264,15 +273,16 @@ def main(
     name: str,
     aliases: tuple[str, ...],
     relatives: str | None,
+    origin_country: str,
     output: str,
     approved: bool,
 ) -> None:
-    """Generate name variations for a Brazilian target for US database searches.
+    """Generate name variations for a target of any nationality for US database searches.
 
     Output is a JSON document matching schemas/identity-variations.schema.json.
     Pipe to a file or use --output to persist.
     """
-    logger.info("Expanding identity for: %s", name)
+    logger.info("Expanding identity for: %s (origin: %s)", name, origin_country.upper())
 
     relatives_list: list[dict[str, str]] = []
     if relatives:

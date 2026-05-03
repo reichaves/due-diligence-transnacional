@@ -8,7 +8,7 @@ Author:  Reinaldo Chaves <reichaves@gmail.com>
 Date:    2026-04-30
 Dependencies: requests, click, beautifulsoup4
 Usage:   python delaware_corp.py --variations identity-variations.json [--output findings/de.json]
-         python delaware_corp.py --name "Refit Energy"
+         python delaware_corp.py --name "Ferreira Global Energy"
 """
 
 from __future__ import annotations

@@ -7,10 +7,16 @@ sem limitações explícitas é um dossiê que superestima sua própria confian�
 
 ## 1. Limitações de cobertura geográfica
 
-### Apenas EUA como jurisdição de destino
+### EUA como única jurisdição de destino
 
-O pipeline foi construído para cruzar pessoas físicas brasileiras com bases
-**americanas** (FEC, LDA, FARA, FL/DE/TX, OpenCorporates-US). Não cobre:
+O pipeline cruza alvos de **qualquer país de origem** com bases **americanas**
+(FEC, LDA, FARA, FL/DE/TX, OpenCorporates-US). O país de origem do alvo é
+configurável via `origin_country` no `target.yaml` (padrão: "BR"). Países de
+origem com suporte de busca de imprensa pré-configurado: BR, US. Para outros
+países (PE, CO, AR, MX e demais), a skill `search-news-archive` realiza busca
+genérica na web.
+
+O que o pipeline **não** cobre na jurisdição de destino:
 
 - Paraísos fiscais populares entre brasileiros: Ilhas Cayman, BVI,
   Luxemburgo, Suíça, Ilhas Jersey — sem sub-skills implementadas

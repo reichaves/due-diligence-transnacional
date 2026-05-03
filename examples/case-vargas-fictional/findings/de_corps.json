@@ -1,0 +1,25 @@
+{
+  "base": "DE-CORPS",
+  "consulted_at": "2026-05-01T14:08:00-05:00",
+  "queries_executed": 5,
+  "status": "ok",
+  "hits": [],
+  "no_hits": [
+    "Vargas Energy USA",
+    "Vargas Energy USA LLC",
+    "Vargas Energia",
+    "Pablo Vargas",
+    "P. Vargas Mendoza"
+  ],
+  "legal_context": [
+    "Delaware incorpora mais de 60% das Fortune 500 e é jurisdição preferida para holdings e offshores por proteção de privacidade. O portal público revela apenas existência da entidade e registered agent — não revela nome de membros ou gerentes de LLCs.",
+    "A ausência de 'Vargas Energy USA' em Delaware não exclui incorporação sob nome diferente (ex: variação da razão social) ou em outro estado americano.",
+    "Para identificar os 'ultimate beneficial owners' de uma Delaware LLC, é necessário processo judicial ou solicitação à FinCEN sob o Corporate Transparency Act (vigente desde 01/01/2024). Jornalistas não têm acesso ao banco de dados FinCEN BOI."
+  ],
+  "next_frontiers": [
+    "Tentar variações do nome da empresa: 'VEM LLC', 'Vargas Energy', 'VEU LLC', 'VargasEnergy' — Delaware permite buscas por substring",
+    "Verificar em Wyoming e Nevada, que também oferecem alta privacidade corporativa a baixo custo",
+    "Solicitar documentação contratual da Petroperú via FOIA peruano (Lei 27.806) para identificar subsidiária americana mencionada nos contratos"
+  ],
+  "methodology_note": "Busca via Delaware ICIS Entity Name Search (icis.corp.delaware.gov). Limitação: Delaware não divulga nome de membros/gerentes de LLCs. Cobertura: todas as entidades registradas no estado."
+}

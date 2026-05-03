@@ -17,13 +17,55 @@ description: >
 - `min_date` (opcional) — data mínima ISO YYYY-MM-DD (default: sem limite)
 - `max_date` (opcional) — data máxima ISO YYYY-MM-DD (default: sem limite)
 
-## Ferramentas disponíveis
+## Modo de execução
 
-- MCP `fec-finance` (obrigatório)
-  - `search_contributions` — busca por nome de doador
-  - `get_candidate_finances` — finanças de candidato
-  - `get_top_donors` — maiores doadores de um comitê
-  - `search_candidates` — buscar candidatos por nome
+Esta skill opera em 3 níveis, em ordem de preferência. Use sempre o nível mais
+alto disponível na sessão atual e registre qual foi usado em `methodology_note`.
+
+### Nível 1 — fec-mcp (preferido)
+
+Se `mcp__fec-mcp__search_contributions` estiver disponível nesta sessão, use-o.
+Retorna JSON estruturado diretamente da API FEC.
+
+```
+mcp__fec-mcp__search_contributions(contributor_name="Carlos Eduardo Ferreira")
+```
+
+Outras ferramentas fec-mcp disponíveis no Nível 1:
+`mcp__fec-mcp__get_top_donors`, `mcp__fec-mcp__search_candidates`,
+`mcp__fec-mcp__search_pacs`, `mcp__fec-mcp__get_contributions_by_state`,
+`mcp__fec-mcp__get_independent_expenditures`, `mcp__fec-mcp__get_campaign_filings`.
+
+### Nível 2 — osint-investigation MCP
+
+Se fec-mcp não estiver disponível mas `mcp__osint-investigation__*` estiver,
+use-o para pesquisa de fontes abertas em torno do nome do alvo. Não retorna
+dados FEC estruturados — é um fallback para menções na imprensa ou registros públicos.
+
+### Nível 3 — Script Python (fallback)
+
+Se nenhum MCP estiver disponível, execute via Bash:
+
+```bash
+python skills/search-fec/scripts/fec_search.py \
+  --variations identity-variations.json \
+  --output findings/fec.json
+```
+
+Informe o usuário que o fec-mcp-server não foi detectado e que instalá-lo melhora
+a cobertura. Instruções em `docs/setup.md` → "Ferramentas opcionais (MCP)".
+
+Vide `references/mcp-detection.md` para lógica de detecção detalhada.
+
+## Ferramentas disponíveis (Nível 1)
+
+- `mcp__fec-mcp__search_contributions` — busca por nome de doador (Schedule A)
+- `mcp__fec-mcp__get_candidate_finances` — finanças de candidato
+- `mcp__fec-mcp__get_top_donors` — maiores doadores de um comitê
+- `mcp__fec-mcp__search_candidates` — buscar candidatos por nome
+- `mcp__fec-mcp__search_pacs` — buscar PACs e Super PACs
+- `mcp__fec-mcp__get_contributions_by_state` — doações filtradas por estado
+- `mcp__fec-mcp__get_independent_expenditures` — gastos independentes
 
 ## Procedimento passo a passo
 
@@ -104,14 +146,14 @@ legalmente coerente — não é um achado negativo em si."
   "status": "ok",
   "hits": [],
   "no_hits": [
-    "Ricardo Andrade Magro",
-    "Ricardo Magro",
-    "Magro Ricardo",
-    "R. Magro",
-    "R.A. Magro",
+    "Carlos Eduardo Ferreira",
+    "Carlos Ferreira",
+    "Ferreira Carlos",
+    "C. Ferreira",
+    "C.E. Ferreira",
     "Ricardo Andrade",
-    "Magro",
-    "Ricardo A Magro"
+    "Ferreira",
+    "Ricardo A Ferreira"
   ],
   "legal_context": [
     "52 U.S.C. § 30121 proíbe nacionais estrangeiros de fazer contribuições em eleições americanas. Ausência de hits é resultado esperado para cidadão brasileiro sem residência permanente nos EUA."
@@ -136,3 +178,4 @@ legalmente coerente — não é um achado negativo em si."
 
 - `references/fec-fields-guide.md` — guia dos campos do Schedule A
 - `references/legal-context-30121.md` — texto da lei e exceções
+- `references/mcp-detection.md` — lógica de detecção MCP (Níveis 1–3)

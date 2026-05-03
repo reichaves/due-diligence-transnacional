@@ -179,6 +179,52 @@ O Claude vai solicitar contexto adicional, gerar variações, e executar os
 
 ---
 
+## Ferramentas opcionais (MCP)
+
+O pipeline detecta automaticamente e usa estas ferramentas MCP se instaladas.
+Sem elas, as sub-skills usam scripts Python como fallback — a cobertura é
+equivalente, mas a velocidade e precisão são menores.
+
+### fec-mcp-server (recomendado para buscas FEC)
+
+Fornece as ferramentas `mcp__fec-mcp__*` para consulta direta e estruturada
+à API da FEC (contribuições, candidatos, PACs, gastos independentes).
+
+```bash
+# Instalar e configurar (já incluso no .mcp.json do repositório)
+pip install uv
+uvx fec-mcp --help   # testar instalação
+```
+
+Repositório: https://github.com/reichaves/fec-mcp-server
+
+### osint-investigation
+
+Fornece ferramentas `mcp__osint-investigation__*` para pesquisa de fontes
+abertas — útil como fallback quando fec-mcp não está disponível, ou para
+buscas na imprensa e em documentos públicos.
+
+```bash
+# Configurar no Claude Code Desktop ou claude_desktop_config.json
+# Veja instruções de instalação no repositório:
+```
+
+Repositório: https://github.com/reichaves/osint-investigation
+
+### Como verificar se os MCPs estão ativos
+
+No Claude Code, os MCP tools disponíveis aparecem listados no início da sessão.
+Para confirmar:
+
+```
+/consultar-base fec "Carlos Eduardo Ferreira"
+```
+
+Se a busca mencionar "Nível 1 — fec-mcp", o servidor MCP está ativo.
+Se mencionar "Nível 3 — script Python", o servidor não foi detectado.
+
+---
+
 ## Solução de problemas comuns
 
 | Erro                                  | Causa provável             | Solução                                      |

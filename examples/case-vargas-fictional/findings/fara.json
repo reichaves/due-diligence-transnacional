@@ -1,0 +1,28 @@
+{
+  "base": "FARA",
+  "consulted_at": "2026-05-01T14:04:00-05:00",
+  "queries_executed": 8,
+  "status": "ok",
+  "hits": [],
+  "no_hits": [
+    "Pablo Vargas Mendoza",
+    "Pablo Vargas",
+    "Vargas Mendoza",
+    "P. Vargas",
+    "Vargas Energy USA LLC",
+    "Vargas Energy USA",
+    "Vargas Energia",
+    "Vargas Energia S.A."
+  ],
+  "legal_context": [
+    "O Foreign Agents Registration Act (22 U.S.C. § 611 et seq.) exige que agentes de governos, partidos políticos e entidades estrangeiras se registrem no DOJ ao exercer atividades políticas, de lobby, ou de relações públicas nos EUA. Vargas Energia S.A. seria considerada 'foreign principal' caso contrataçe um agente americano.",
+    "A ausência de registro não exclui atividade. O DOJ frequentemente leva semanas ou meses entre o registro e a publicação. Investigação recente do DOJ sobre cumprimento do FARA revelou que apenas 20-30% dos registros obrigatórios são feitos espontaneamente.",
+    "Isenção LDA (22 U.S.C. § 613(h)): atividades de lobby puramente comerciais (sem impacto em política pública dos EUA) podem ser declaradas no LDA em vez do FARA. Verificar se ausência é por isenção, não por omissão."
+  ],
+  "next_frontiers": [
+    "Verificar manualmente em efile.fara.gov — a cobertura da busca automatizada é parcial para registros anteriores a 2016",
+    "Investigar se a Vargas Energia S.A. tem contratos diretos com o governo peruano ou agências vinculadas que poderiam desencadear obrigação FARA",
+    "Buscar no FARA pelo nome de consultoras de Washington D.C. especializadas em América Latina (possíveis agentes não identificados)"
+  ],
+  "methodology_note": "Buscas realizadas via efile.fara.gov/api/v1/search e scraping da interface pública. Cobertura: 1941-2024 (registros digitalizados). Limitação: registros pré-1995 têm cobertura parcial; atraso de publicação é documentado."
+}

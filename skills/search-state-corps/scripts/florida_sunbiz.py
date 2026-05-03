@@ -7,7 +7,7 @@ Author:  Reinaldo Chaves <reichaves@gmail.com>
 Date:    2026-04-30
 Dependencies: requests, click, beautifulsoup4
 Usage:   python florida_sunbiz.py --variations identity-variations.json [--output findings/fl.json]
-         python florida_sunbiz.py --name "Ricardo Magro"
+         python florida_sunbiz.py --name "Carlos Ferreira"
 """
 
 from __future__ import annotations

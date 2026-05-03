@@ -7,7 +7,7 @@ Author:  Reinaldo Chaves <reichaves@gmail.com>
 Date:    2026-04-30
 Dependencies: requests, click, python-dotenv
 Usage:   python lda_search.py --variations identity-variations.json [--output findings/lda.json]
-         python lda_search.py --name "Ricardo Magro"
+         python lda_search.py --name "Carlos Ferreira"
 """
 
 from __future__ import annotations

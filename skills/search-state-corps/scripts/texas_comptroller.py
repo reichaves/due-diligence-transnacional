@@ -8,7 +8,7 @@ Author:  Reinaldo Chaves <reichaves@gmail.com>
 Date:    2026-04-30
 Dependencies: requests, click, beautifulsoup4
 Usage:   python texas_comptroller.py --variations identity-variations.json [--output findings/tx.json]
-         python texas_comptroller.py --name "Refit Energy"
+         python texas_comptroller.py --name "Ferreira Global Energy"
 """
 
 from __future__ import annotations

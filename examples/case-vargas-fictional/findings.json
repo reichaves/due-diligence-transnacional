@@ -1,0 +1,211 @@
+{
+  "target_name": "Pablo Vargas Mendoza",
+  "origin_country": "PE",
+  "consolidated_at": "2026-05-01T14:20:00-05:00",
+  "sources_count": 9,
+  "total_hits": 0,
+  "findings": [
+    {
+      "base": "FEC",
+      "consulted_at": "2026-05-01T14:00:00-05:00",
+      "queries_executed": 9,
+      "status": "ok",
+      "hits": [],
+      "no_hits": [
+        "Pablo Vargas Mendoza", "Pablo Vargas", "Vargas Pablo",
+        "P. Vargas Mendoza", "P. Vargas", "Vargas Mendoza",
+        "Carmen Lucia Vargas", "Vargas Energy USA", "Vargas Energia"
+      ],
+      "legal_context": [
+        "52 U.S.C. § 30121 proíbe estrangeiros não-residentes de contribuírem para campanhas eleitorais federais americanas. A ausência de registros é o resultado esperado e legalmente coerente para um cidadão peruano sem residência permanente nos EUA — não constitui achado negativo."
+      ]
+    },
+    {
+      "base": "LDA",
+      "consulted_at": "2026-05-01T14:02:00-05:00",
+      "queries_executed": 8,
+      "status": "ok",
+      "hits": [],
+      "no_hits": [
+        "Pablo Vargas Mendoza", "Pablo Vargas", "Vargas Mendoza",
+        "P. Vargas", "Vargas Energy USA LLC", "Vargas Energy USA",
+        "Vargas Energia", "Vargas Energia S.A."
+      ],
+      "legal_context": [
+        "O Lobbying Disclosure Act (2 U.S.C. § 1601 et seq.) exige registro de lobbyistas acima do threshold de USD 3.000/trimestre. Ausência não exclui atividade abaixo do threshold ou declarada apenas no FARA."
+      ]
+    },
+    {
+      "base": "FARA",
+      "consulted_at": "2026-05-01T14:04:00-05:00",
+      "queries_executed": 8,
+      "status": "ok",
+      "hits": [],
+      "no_hits": [
+        "Pablo Vargas Mendoza", "Pablo Vargas", "Vargas Mendoza",
+        "P. Vargas", "Vargas Energy USA LLC", "Vargas Energy USA",
+        "Vargas Energia", "Vargas Energia S.A."
+      ],
+      "legal_context": [
+        "O Foreign Agents Registration Act (22 U.S.C. § 611 et seq.) exige registro de agentes de entidades estrangeiras. Ausência pode indicar: (a) atividade inexistente nos EUA; (b) registro pendente de publicação; (c) atividade declarada no LDA via isenção § 613(h)."
+      ]
+    },
+    {
+      "base": "FL-SUNBIZ",
+      "consulted_at": "2026-05-01T14:06:00-05:00",
+      "queries_executed": 7,
+      "status": "ok",
+      "hits": [],
+      "no_hits": [
+        "Pablo Vargas Mendoza", "Pablo Vargas", "P. Vargas",
+        "Vargas Energy USA", "Vargas Energy USA LLC",
+        "Vargas Energia", "Carmen Lucia Vargas"
+      ],
+      "legal_context": [
+        "Registros públicos conforme Florida Sunshine Laws (F.S. § 119.01). Ausência confirma que Pablo Vargas Mendoza não aparece como officer ou registered agent em entidade registrada na Flórida."
+      ]
+    },
+    {
+      "base": "DE-CORPS",
+      "consulted_at": "2026-05-01T14:08:00-05:00",
+      "queries_executed": 5,
+      "status": "ok",
+      "hits": [],
+      "no_hits": [
+        "Vargas Energy USA", "Vargas Energy USA LLC",
+        "Vargas Energia", "Pablo Vargas", "P. Vargas Mendoza"
+      ],
+      "legal_context": [
+        "Delaware não revela membros/gerentes de LLCs publicamente. Ausência da razão social no ICIS indica que nenhuma entidade com esse nome está incorporada em Delaware — mas variações da razão social podem existir."
+      ]
+    },
+    {
+      "base": "TX-COMPTROLLER",
+      "consulted_at": "2026-05-01T14:10:00-05:00",
+      "queries_executed": 6,
+      "status": "ok",
+      "hits": [],
+      "no_hits": [
+        "Pablo Vargas Mendoza", "Pablo Vargas",
+        "Vargas Energy USA LLC", "Vargas Energy USA",
+        "Vargas Energia", "P. Vargas"
+      ],
+      "legal_context": [
+        "Registro obrigatório para empresas operando no Texas. Ausência indica que nenhuma entidade associada ao alvo está qualificada para operação no estado."
+      ]
+    },
+    {
+      "base": "OPENCORPORATES",
+      "consulted_at": "2026-05-01T14:12:00-05:00",
+      "queries_executed": 7,
+      "status": "ok",
+      "hits": [],
+      "no_hits": [
+        "Pablo Vargas Mendoza", "Pablo Vargas", "P. Vargas Mendoza",
+        "Vargas Energy USA LLC", "Vargas Energy USA",
+        "Vargas Energia", "Vargas Energia S.A."
+      ],
+      "legal_context": [
+        "OpenCorporates cobre 140+ jurisdições, incluindo PE (SUNARP), US:de, US:fl, US:tx, US:nv, US:ny. Ausência em todas as jurisdições consultadas é resultado significativo — subsidiária americana pode não ter sido registrada ainda."
+      ]
+    },
+    {
+      "base": "NEWS-BR",
+      "consulted_at": "2026-05-01T14:14:00-05:00",
+      "queries_executed": 7,
+      "status": "ok",
+      "hits": [],
+      "no_hits": [
+        "Pablo Vargas Mendoza", "Pablo Vargas", "Vargas Energia",
+        "Vargas Energy USA", "Vargas Mendoza Peru",
+        "Petroperú Vargas", "P. Vargas Mendoza"
+      ],
+      "legal_context": []
+    },
+    {
+      "base": "NEWS-US",
+      "consulted_at": "2026-05-01T14:16:00-05:00",
+      "queries_executed": 8,
+      "status": "ok",
+      "hits": [],
+      "no_hits": [
+        "Pablo Vargas Mendoza", "Pablo Vargas", "Vargas Energy USA",
+        "Vargas Energia Peru", "Vargas Mendoza energy",
+        "Petroperú Vargas", "Vargas Energy LLC", "Pablo Vargas Peru oil"
+      ],
+      "legal_context": []
+    }
+  ],
+  "triangulations": [],
+  "high_confidence_flags": [],
+  "gaps": [
+    {
+      "base": "FEC",
+      "reason": "no_hits",
+      "detail": "9 variações testadas sem resultado. Legalmente coerente para estrangeiro não-residente (§ 30121).",
+      "suggested_action": "Verificar se o alvo possui green card ou cidadania americana antes de concluir sobre ausência"
+    },
+    {
+      "base": "LDA",
+      "reason": "no_hits",
+      "detail": "8 variações testadas sem resultado. Verificar se atividade de lobby fica abaixo do threshold de USD 3.000/trimestre.",
+      "suggested_action": "Buscar diretamente no lda.senate.gov por consultoras de GR que representem clientes peruanos"
+    },
+    {
+      "base": "FARA",
+      "reason": "no_hits",
+      "detail": "8 variações testadas sem resultado. Atraso de publicação de semanas a meses é documentado.",
+      "suggested_action": "Verificar manualmente em efile.fara.gov e monitorar por 60 dias após data da investigação"
+    },
+    {
+      "base": "FL-SUNBIZ",
+      "reason": "no_hits",
+      "detail": "7 variações testadas sem resultado.",
+      "suggested_action": "Verificar registro em outros estados: Texas (Railroad Commission), Nevada, Wyoming"
+    },
+    {
+      "base": "DE-CORPS",
+      "reason": "no_hits",
+      "detail": "5 variações de razão social testadas sem resultado. Possível variação não testada.",
+      "suggested_action": "Tentar variações abreviadas: 'VEM LLC', 'VEU LLC', 'Vargas Energy' (substring)"
+    },
+    {
+      "base": "TX-COMPTROLLER",
+      "reason": "no_hits",
+      "detail": "6 variações testadas sem resultado.",
+      "suggested_action": "Verificar Railroad Commission of Texas (RRC) para permissões de operação em campos de petróleo"
+    },
+    {
+      "base": "OPENCORPORATES",
+      "reason": "no_hits",
+      "detail": "7 variações testadas em 9 jurisdições (US:de, US:fl, US:tx, US:nv, US:ny, pe, ky, vg, pa) sem resultado.",
+      "suggested_action": "Consultar diretamente SUNARP (Peru) para verificar empresas na jurisdição de origem"
+    },
+    {
+      "base": "NEWS-BR",
+      "reason": "no_hits",
+      "detail": "7 variações testadas. Ausência esperada para alvo peruano sem relação documentada com o Brasil.",
+      "suggested_action": "Priorizar busca em imprensa peruana: IDL-Reporteros (idl.org.pe), Ojo Público (ojopublico.pe), El Comercio"
+    },
+    {
+      "base": "NEWS-US",
+      "reason": "no_hits",
+      "detail": "8 variações testadas em portais americanos especializados (Houston Chronicle, WSJ, Bloomberg). Ausência sugere que a expansão americana ainda não tem cobertura pública.",
+      "suggested_action": "Buscar em S&P Global Platts e Oil & Gas Journal por registros setoriais; considerar busca em PACER (CourtListener) por processos judiciais"
+    }
+  ],
+  "legal_contexts": [
+    "52 U.S.C. § 30121 — proíbe doações de estrangeiros não-residentes a campanhas federais americanas",
+    "22 U.S.C. § 611 et seq. (FARA) — registro obrigatório de agentes de entidades estrangeiras",
+    "2 U.S.C. § 1601 et seq. (LDA) — disclosure de lobby federal acima de USD 3.000/trimestre",
+    "Corporate Transparency Act (2024) — FinCEN BOI database de beneficiários finais (restrito a autoridades)"
+  ],
+  "next_frontiers": [
+    "Buscar diretamente na imprensa peruana (IDL-Reporteros, Ojo Público) por investigações anteriores sobre Pablo Vargas Mendoza e Vargas Energia S.A.",
+    "Verificar SUNARP (Peru) para mapeamento completo de empresas vinculadas ao alvo na jurisdição de origem",
+    "Consultar Oil & Gas Journal e Platts sobre expansão de empresas peruanas no mercado americano de energia",
+    "Verificar Railroad Commission of Texas (RRC) para permissões operacionais no setor de petróleo e gás texano",
+    "Monitorar FARA por 60 dias — atraso de publicação é documentado pelo DOJ",
+    "Considerar acesso a PACER/CourtListener para verificar processos judiciais federais associados ao alvo"
+  ]
+}

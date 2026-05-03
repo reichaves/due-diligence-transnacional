@@ -1,0 +1,29 @@
+{
+  "base": "FEC",
+  "consulted_at": "2026-05-01T14:00:00-05:00",
+  "queries_executed": 9,
+  "status": "ok",
+  "hits": [],
+  "no_hits": [
+    "Pablo Vargas Mendoza",
+    "Pablo Vargas",
+    "Vargas Pablo",
+    "P. Vargas Mendoza",
+    "P. Vargas",
+    "Vargas Mendoza",
+    "Carmen Lucia Vargas",
+    "Vargas Energy USA",
+    "Vargas Energia"
+  ],
+  "legal_context": [
+    "52 U.S.C. § 30121 proíbe estrangeiros não-residentes (foreign nationals) de contribuírem para campanhas eleitorais federais americanas. A ausência de registros é o resultado esperado e legalmente coerente para um cidadão peruano sem residência permanente nos EUA — não constitui achado negativo.",
+    "Cidadãos peruanos com green card (LPR) são considerados 'US persons' para fins de doação eleitoral. Se Vargas possuir residência permanente, a ausência de registro seria significativa.",
+    "Empresas estrangeiras (Vargas Energia S.A.) não podem fazer doações a campanhas federais americanas, mesmo via subsidiária americana, salvo exceções específicas da FEC."
+  ],
+  "next_frontiers": [
+    "Verificar se Pablo Vargas Mendoza possui green card ou cidadania americana — se sim, doação seria legal e a ausência seria achado relevante",
+    "Verificar contribuições a PACs independentes (Super PACs) e organizações 501(c)(4), que aceitam doações de estrangeiros em determinadas circunstâncias",
+    "Consultar FEC Schedule B (disbursements) para verificar se algum PAC fez gastos ligados a interesses da Vargas Energy USA LLC"
+  ],
+  "methodology_note": "Buscas realizadas via MCP fec-finance:search_contributions. Cobertura: ciclos eleitorais 2018-2026. Campos consultados: contributor_name (todas as variações), contributor_employer (Vargas Energy USA LLC, Vargas Energia S.A.). Sem filtro de estado."
+}

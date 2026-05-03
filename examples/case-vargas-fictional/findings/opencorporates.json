@@ -1,0 +1,26 @@
+{
+  "base": "OPENCORPORATES",
+  "consulted_at": "2026-05-01T14:12:00-05:00",
+  "queries_executed": 7,
+  "status": "ok",
+  "hits": [],
+  "no_hits": [
+    "Pablo Vargas Mendoza",
+    "Pablo Vargas",
+    "P. Vargas Mendoza",
+    "Vargas Energy USA LLC",
+    "Vargas Energy USA",
+    "Vargas Energia",
+    "Vargas Energia S.A."
+  ],
+  "legal_context": [
+    "O OpenCorporates agrega dados de mais de 140 jurisdições e 200 milhões de empresas. A busca por officer name inclui US:de, US:fl, US:tx, US:nv, US:ny além de jurisdições internacionais. Ausência indica que nenhum registro público nas jurisdições cobertas associa o nome a empresa.",
+    "Peru (PE) está parcialmente coberto pelo OpenCorporates via SUNARP. A qualidade dos dados peruanos é variável — verificar diretamente no portal SUNARP para cobertura completa da jurisdição de origem."
+  ],
+  "next_frontiers": [
+    "Consultar diretamente o SUNARP (Superintendência Nacional de Registros Públicos do Peru) para verificar empresas registradas em nome de Vargas Mendoza na jurisdição de origem",
+    "Buscar no OpenCorporates usando apenas 'Vargas Energy' como razão social (substring) — pode capturar variações não tentadas",
+    "Verificar Islas Caimán (KY), Islas Vírgenes Britânicas (VG) e Panamá (PA) no OpenCorporates — jurisdições de offshore comuns para empresas peruanas do setor de energia"
+  ],
+  "methodology_note": "Buscas realizadas via OpenCorporates API (officer_name e company_name). Plano gratuito: 50 req/dia. Jurisdições consultadas: US:de, US:fl, US:tx, US:nv, US:ny, pe, ky, vg, pa. Cobertura variável por jurisdição."
+}

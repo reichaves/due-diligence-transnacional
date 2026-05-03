@@ -8,7 +8,7 @@ Author:  Reinaldo Chaves <reichaves@gmail.com>
 Date:    2026-04-30
 Dependencies: requests, click, python-dotenv
 Usage:   python opencorporates_search.py --variations identity-variations.json [--output findings/opencorporates.json]
-         python opencorporates_search.py --name "Ricardo Magro" [--jurisdiction us_fl]
+         python opencorporates_search.py --name "Carlos Ferreira" [--jurisdiction us_fl]
 """
 
 from __future__ import annotations

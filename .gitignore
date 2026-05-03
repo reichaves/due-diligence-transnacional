@@ -44,14 +44,20 @@ cases/*/dossier.pdf
 cases/*/findings*.json
 cases/*/identity-variations.json
 
+# Caso interno de referência — não publicar no GitHub
+examples/case-magro-redacted/
+
 # Exceção: exemplos didáticos (PDF gerado sinteticamente)
 !examples/case-fictional/dossier.pdf
-!examples/case-magro-redacted/dossier.pdf
+!examples/case-vargas-fictional/dossier.pdf
 
 # OS
 .DS_Store
 Thumbs.db
 desktop.ini
+
+# Claude Code — local settings (user-specific permissions, not for sharing)
+.claude/settings.local.json
 
 # IDEs
 .vscode/

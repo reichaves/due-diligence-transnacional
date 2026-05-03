@@ -10,11 +10,11 @@
     "nome_completo": {
       "type": "string",
       "minLength": 3,
-      "description": "Nome completo do alvo, em português, como consta em documentos oficiais brasileiros."
+      "description": "Nome completo do alvo como consta em documentos oficiais do país de origem. Para alvos brasileiros: conforme CPF/RG. Para outros países: transliteração oficial usada em documentos."
     },
     "ocupacao": {
       "type": "string",
-      "description": "Ocupação ou cargo principal do alvo (ex: 'CEO do Grupo Refit', 'Empresário do setor de petróleo')."
+      "description": "Ocupação ou cargo principal do alvo (ex: 'CEO da Ferreira Global Ltda', 'Empresário do setor de petróleo')."
     },
     "empresa_principal": {
       "type": "string",
@@ -22,7 +22,7 @@
     },
     "cidade_residencia": {
       "type": "string",
-      "description": "Cidade de residência (Brasil), se conhecida."
+      "description": "Cidade de residência no país de origem, se conhecida."
     },
     "uf_residencia_us": {
       "type": "string",
@@ -61,6 +61,18 @@
       "type": "string",
       "minLength": 30,
       "description": "Descrição factual de por que esta pessoa está sendo investigada. Vai para o log e o dossiê. Mínimo 30 caracteres. Ex: 'Gestor de refinaria no Texas investigado por superfaturamento em contrato com a Petrobras'."
+    },
+    "origin_country": {
+      "type": "string",
+      "pattern": "^[A-Z]{2}$",
+      "default": "BR",
+      "description": "País de origem do alvo (ISO 3166-1 alpha-2). Aceita qualquer país. Ex: 'BR', 'US', 'PE', 'CO', 'NG', 'CN', 'DE'. Default 'BR'. Afeta quais outlets de imprensa são incluídos nas buscas pela skill search-news-archive."
+    },
+    "investigation_language": {
+      "type": "string",
+      "enum": ["pt-BR", "en-US"],
+      "default": "pt-BR",
+      "description": "Idioma do dossiê e das comunicações do pipeline. 'pt-BR' para português brasileiro, 'en-US' para inglês americano."
     },
     "bases_prioritarias": {
       "type": "array",

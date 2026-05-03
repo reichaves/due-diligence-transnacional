@@ -1,0 +1,25 @@
+{
+  "base": "TX-COMPTROLLER",
+  "consulted_at": "2026-05-01T14:10:00-05:00",
+  "queries_executed": 6,
+  "status": "ok",
+  "hits": [],
+  "no_hits": [
+    "Pablo Vargas Mendoza",
+    "Pablo Vargas",
+    "Vargas Energy USA LLC",
+    "Vargas Energy USA",
+    "Vargas Energia",
+    "P. Vargas"
+  ],
+  "legal_context": [
+    "O Texas Comptroller of Public Accounts mantém o registro de entidades domésticas e estrangeiras qualificadas para operar no Texas. Setores de petróleo e gás (SIC 1311) e agronegócio têm alta concentração de empresas latino-americanas registradas.",
+    "A ausência no TX Comptroller indica que nenhuma entidade com nome associado a Pablo Vargas Mendoza está registrada no Texas. Empresas que operam no Texas sem registro local incorrem em penalidades."
+  ],
+  "next_frontiers": [
+    "Verificar Railroad Commission of Texas (RRC) para permissões de operação em campos de petróleo e gás no estado — banco de dados separado do Comptroller",
+    "Buscar no Texas Secretary of State (SOS) usando variações de nome — o TX-SOS tem cobertura complementar ao Comptroller",
+    "Verificar em Houston Business Journal e Dallas Business Journal por cobertura de empresa peruana no setor de energia texano"
+  ],
+  "methodology_note": "Busca via Texas Comptroller Taxable Entity Search (mycpa.cpa.state.tx.us/coa). Cobertura: empresas domésticas e estrangeiras qualificadas no Texas. Atualização: semanal."
+}

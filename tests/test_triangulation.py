@@ -60,7 +60,7 @@ def _make_finding(
         "queries_executed": queries,
         "status": status,
         "hits": hits or [],
-        "no_hits": no_hits or ["Ricardo Magro", "R. Magro"],
+        "no_hits": no_hits or ["Carlos Ferreira", "C. Ferreira"],
     }
 
 
@@ -337,7 +337,7 @@ class TestIdentifyGaps:
         assert any(g["base"] == "FEC" and g["reason"] == "error" for g in gaps)
 
     def test_no_hits_is_gap(self, tri: ModuleType) -> None:
-        findings = [_make_finding("FARA", hits=[], no_hits=["Ricardo Magro"])]
+        findings = [_make_finding("FARA", hits=[], no_hits=["Carlos Ferreira"])]
         gaps = tri.identify_gaps(findings, expected_bases=["FARA"])
         assert any(g["base"] == "FARA" and g["reason"] == "no_hits" for g in gaps)
 

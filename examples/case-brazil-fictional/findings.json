@@ -1,5 +1,5 @@
 {
-  "target_name": "Ricardo Andrade Magro",
+  "target_name": "Carlos Eduardo Ferreira",
   "consolidated_at": "2026-05-01T14:30:00-03:00",
   "sources_count": 7,
   "total_hits": 4,
@@ -12,19 +12,19 @@
       "status": "ok",
       "hits": [],
       "no_hits": [
-        "Ricardo Andrade Magro",
-        "Ricardo Magro",
-        "Magro Ricardo",
-        "R. A. Magro",
-        "R. Magro",
-        "Magro",
+        "Carlos Eduardo Ferreira",
+        "Carlos Ferreira",
+        "Ferreira Carlos",
+        "C. E. Ferreira",
+        "C. Ferreira",
+        "Ferreira",
         "[REDACTED — parentes]"
       ],
       "legal_context": [
         "52 U.S.C. § 30121 proíbe estrangeiros não-residentes de contribuírem para campanhas federais americanas. Ausência esperada para cidadão brasileiro."
       ],
       "next_frontiers": [
-        "Verificar status migratório de Ricardo Magro nos EUA",
+        "Verificar status migratório de Carlos Ferreira nos EUA",
         "Consultar FEC Schedule B para gastos de PACs ligados ao setor de logística e combustíveis"
       ]
     },
@@ -35,11 +35,11 @@
       "status": "ok",
       "hits": [],
       "no_hits": [
-        "Ricardo Andrade Magro",
-        "Ricardo Magro",
-        "Magro Ricardo",
-        "R. A. Magro",
-        "R. Magro",
+        "Carlos Eduardo Ferreira",
+        "Carlos Ferreira",
+        "Ferreira Carlos",
+        "C. E. Ferreira",
+        "C. Ferreira",
         "[REDACTED — empresa principal]",
         "[REDACTED — subsidiária americana]"
       ],
@@ -47,7 +47,7 @@
         "A ausência no LDA não exclui atividade de influência — contatos informais e reuniões com congressistas não são registráveis se não houver contrato formal de lobby."
       ],
       "next_frontiers": [
-        "Verificar subsidiária americana do Grupo Refit diretamente como cliente no LDA",
+        "Verificar subsidiária americana do Ferreira Global Ltda diretamente como cliente no LDA",
         "Buscar lobbyistas do setor de logistics/fuel supply que podem ter representado interesses do grupo"
       ]
     },
@@ -58,8 +58,8 @@
       "status": "ok",
       "hits": [],
       "no_hits": [
-        "Ricardo Andrade Magro",
-        "Ricardo Magro",
+        "Carlos Eduardo Ferreira",
+        "Carlos Ferreira",
         "[REDACTED — empresa principal]",
         "[REDACTED — subsidiária americana]"
       ],
@@ -91,14 +91,14 @@
             "registered_agent": "[REDACTED — pessoa física]",
             "authorized_persons": [
               {
-                "name": "[REDACTED — sócio com sobrenome Magro]",
+                "name": "[REDACTED — sócio com sobrenome Ferreira]",
                 "title": "MGR",
                 "address": "[REDACTED — Miami, FL]"
               }
             ]
           },
           "normalized": {
-            "full_name": "[REDACTED — sócio Magro]",
+            "full_name": "[REDACTED — sócio Ferreira]",
             "entity_name": "[REDACTED — empresa]",
             "address": "[REDACTED — Miami, FL]",
             "state": "FL",
@@ -109,10 +109,10 @@
         }
       ],
       "no_hits": [
-        "Ricardo Andrade Magro",
-        "Ricardo Magro",
-        "R. A. Magro",
-        "R. Magro"
+        "Carlos Eduardo Ferreira",
+        "Carlos Ferreira",
+        "C. E. Ferreira",
+        "C. Ferreira"
       ],
       "legal_context": [
         "O Florida Sunshine Law (F.S. § 119.01) garante acesso público aos registros corporativos."
@@ -154,9 +154,9 @@
         }
       ],
       "no_hits": [
-        "Ricardo Andrade Magro",
-        "Ricardo Magro",
-        "R. Magro"
+        "Carlos Eduardo Ferreira",
+        "Carlos Ferreira",
+        "C. Ferreira"
       ],
       "legal_context": [
         "Delaware LLC não divulga beneficial owners publicamente — estrutura típica de holding offshore."
@@ -193,10 +193,10 @@
         }
       ],
       "no_hits": [
-        "Ricardo Andrade Magro",
-        "Ricardo Magro",
-        "R. Magro",
-        "Magro"
+        "Carlos Eduardo Ferreira",
+        "Carlos Ferreira",
+        "C. Ferreira",
+        "Ferreira"
       ],
       "legal_context": [],
       "next_frontiers": [
@@ -210,7 +210,7 @@
       "status": "ok",
       "hits": [
         {
-          "variation_matched": "Ricardo Magro",
+          "variation_matched": "Carlos Ferreira",
           "match_type": "exact",
           "source_id": "[REDACTED — outlet e data]",
           "source_url": "[REDACTED]",
@@ -219,18 +219,18 @@
             "outlet": "[REDACTED — veículo de imprensa brasileiro]",
             "title": "[REDACTED — manchete da reportagem]",
             "date": "[REDACTED — data da publicação]",
-            "excerpt": "[REDACTED — trecho citando Ricardo Magro no contexto investigativo]"
+            "excerpt": "[REDACTED — trecho citando Carlos Ferreira no contexto investigativo]"
           },
           "normalized": {
-            "full_name": "Ricardo Magro",
+            "full_name": "Carlos Ferreira",
             "date": "[REDACTED]"
           }
         }
       ],
       "no_hits": [
-        "Ricardo Andrade Magro",
-        "Magro Ricardo",
-        "C. Magro",
+        "Carlos Eduardo Ferreira",
+        "Ferreira Carlos",
+        "C. Ferreira",
         "[REDACTED — parentes]"
       ],
       "legal_context": [],
@@ -252,15 +252,15 @@
     {
       "type": "person_match",
       "sources": ["FL-SUNBIZ", "NEWS-BR"],
-      "detail": "O sobrenome Magro aparece como gestor/authorized person na empresa Florida e como alvo de reportagem na imprensa brasileira — indicação de que se trata da mesma pessoa.",
-      "matched_value": "[REDACTED — Magro]",
+      "detail": "O sobrenome Ferreira aparece como gestor/authorized person na empresa Florida e como alvo de reportagem na imprensa brasileira — indicação de que se trata da mesma pessoa.",
+      "matched_value": "[REDACTED — Ferreira]",
       "confidence": "provavel",
       "source_ids": ["[REDACTED-FL-officer]", "[REDACTED-news]"]
     }
   ],
   "high_confidence_flags": [
     "Empresa americana ([REDACTED]) confirmada em FL-SUNBIZ, DE-CORPS e OPENCORPORATES — presença corporativa nos EUA estabelecida (confirmado, 3 fontes primárias)",
-    "Membro com sobrenome Magro listado como gestor da empresa florida — vínculo de controle (provável, 1 fonte primária + 1 imprensa)"
+    "Membro com sobrenome Ferreira listado como gestor da empresa florida — vínculo de controle (provável, 1 fonte primária + 1 imprensa)"
   ],
   "gaps": [
     {

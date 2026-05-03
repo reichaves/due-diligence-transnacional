@@ -8,7 +8,7 @@ Não existe nível "suspeito" ou "provado" — apenas os quatro abaixo.
 **Critério:** duas ou mais fontes primárias independentes concordam com
 a mesma informação, sem ambiguidade de identidade.
 
-**Exemplo:** nome "Ricardo Magro" aparece como officer no Sunbiz (FL)
+**Exemplo:** nome "Carlos Ferreira" aparece como officer no Sunbiz (FL)
 E como contribuinte no FEC Schedule A, ambos com mesmo endereço em Miami.
 
 **No dossiê:** afirmação direta. Cite ambas as fontes.
@@ -20,8 +20,8 @@ E como contribuinte no FEC Schedule A, ambos com mesmo endereço em Miami.
 **Critério:** uma fonte primária com dado sólido, mais evidência
 circunstancial de suporte (sem contradição).
 
-**Exemplo:** empresa "Refit USA LLC" listada no Sunbiz com officer "R.
-Magro" — sem confirmação de que é o mesmo Ricardo Magro investigado,
+**Exemplo:** empresa "Ferreira Global USA LLC" listada no Sunbiz com officer "R.
+Ferreira" — sem confirmação de que é o mesmo Carlos Ferreira investigado,
 mas contexto de negócios bate com o alvo.
 
 **No dossiê:** "É provável que..." seguido de citação da fonte e da
@@ -35,7 +35,7 @@ evidência circunstancial. Indicar o que faltou para chegar a `confirmado`.
 diretamente. Pode ser cruzamento de imprensa, menção secundária, ou
 achado em base com dados incompletos.
 
-**Exemplo:** artigo de jornal menciona "Ricardo Magro" como sócio de
+**Exemplo:** artigo de jornal menciona "Carlos Ferreira" como sócio de
 empresa em Houston, mas não há registro estadual confirmando.
 
 **No dossiê:** "Há indício de..." seguido de fonte e limitação explícita.

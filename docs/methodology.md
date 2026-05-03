@@ -64,7 +64,7 @@ Para qualquer nome, o script `expand_identity.py` gera:
 2. Nome completo sem acentos (transliteração ASCII)
 3. Primeiro nome + último sobrenome
 4. Último sobrenome + primeiro nome (ordem americana)
-5. Iniciais + último sobrenome (ex: "R.A. Magro")
+5. Iniciais + último sobrenome (ex: "C.E. Ferreira")
 6. Último sobrenome isolado (busca ampla — alto ruído, necessário para
    variações irrecuperáveis pelas anteriores)
 7. Para cada parente fornecido: variações 1-6 aplicadas ao parente

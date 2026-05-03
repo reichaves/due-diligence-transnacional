@@ -1,13 +1,14 @@
 ---
 name: search-news-archive
 description: >
-  Busca cobertura jornalística de uma pessoa brasileira em outlets confiáveis
-  do Brasil e dos EUA. Usa web search com filtros de site para outlets
-  curados em `references/trusted-outlets.md`. Use quando o orquestrador
-  `due-diligence-transnacional` solicitar, ou quando o usuário pedir
-  "/consultar-base news NOME". Retorna links de matérias com resumo e
-  classificação de relevância. Nunca inventa cobertura — se não encontrar,
-  registra explicitamente.
+  Busca cobertura jornalística de qualquer pessoa em outlets confiáveis do
+  Brasil e dos EUA. Para alvos de outros países (origin_country diferente de BR
+  ou US), executa busca genérica na web além dos outlets curados. Usa web
+  search com filtros de site para outlets em `references/trusted-outlets.md`.
+  Use quando o orquestrador `due-diligence-transnacional` solicitar, ou quando
+  o usuário pedir "/consultar-base news NOME". Retorna links de matérias com
+  resumo e classificação de relevância. Nunca inventa cobertura — se não
+  encontrar, registra explicitamente.
 ---
 
 # Busca em Arquivo de Imprensa
@@ -107,22 +108,22 @@ Campo `source_id` = URL da matéria (identificador único).
   "status": "ok",
   "hits": [
     {
-      "variation_matched": "Ricardo Magro",
+      "variation_matched": "Carlos Ferreira",
       "match_type": "exact",
       "source_id": "https://agenciapublica.org.br/noticia/exemplo/",
       "source_url": "https://agenciapublica.org.br/noticia/exemplo/",
       "confidence": "confirmado",
       "raw_record": {
-        "title": "Grupo Refit aparece em contrato milionário com Petrobras",
+        "title": "Ferreira Global Ltda aparece em contrato milionário com Petrobras",
         "outlet": "Agência Pública",
         "date": "2024-11-15",
-        "snippet": "Ricardo Magro, sócio do Grupo Refit...",
+        "snippet": "Carlos Ferreira, sócio do Ferreira Global Ltda...",
         "paywall": false,
         "relevance": "alta"
       }
     }
   ],
-  "no_hits": ["Ricardo Andrade Magro", "R. Magro"],
+  "no_hits": ["Carlos Eduardo Ferreira", "C. Ferreira"],
   "methodology_note": "Busca limitada a outlets listados em references/trusted-outlets.md. Não cobre imprensa local ou portais não-curados."
 }
 ```

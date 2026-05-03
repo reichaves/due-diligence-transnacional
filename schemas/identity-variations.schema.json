@@ -68,16 +68,16 @@
   },
   "examples": [
     {
-      "target_name": "Ricardo Andrade Magro",
+      "target_name": "Carlos Eduardo Ferreira",
       "generated_at": "2026-04-30T14:00:00+00:00",
       "approved_by_human": false,
       "variations": [
-        {"variation": "Ricardo Andrade Magro", "type": "full_name", "note": "Nome completo conforme fornecido"},
-        {"variation": "Ricardo Magro",         "type": "first_last", "note": "Primeiro nome + último sobrenome, sem acentos"},
-        {"variation": "Magro Ricardo",         "type": "last_first", "note": "Ordem invertida — comum em formulários americanos"},
-        {"variation": "R. A. Magro",           "type": "initials_last", "note": "Iniciais + último sobrenome"},
-        {"variation": "R. Magro",              "type": "initials_last", "note": "Primeira inicial + último sobrenome"},
-        {"variation": "Magro",                 "type": "surname_only", "note": "Sobrenome isolado — busca ampla, alto ruído"}
+        {"variation": "Carlos Eduardo Ferreira", "type": "full_name", "note": "Nome completo conforme fornecido"},
+        {"variation": "Carlos Ferreira",         "type": "first_last", "note": "Primeiro nome + último sobrenome, sem acentos"},
+        {"variation": "Ferreira Carlos",         "type": "last_first", "note": "Ordem invertida — comum em formulários americanos"},
+        {"variation": "C. E. Ferreira",           "type": "initials_last", "note": "Iniciais + último sobrenome"},
+        {"variation": "C. Ferreira",              "type": "initials_last", "note": "Primeira inicial + último sobrenome"},
+        {"variation": "Ferreira",                 "type": "surname_only", "note": "Sobrenome isolado — busca ampla, alto ruído"}
       ]
     }
   ]

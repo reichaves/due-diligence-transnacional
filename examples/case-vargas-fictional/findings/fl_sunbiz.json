@@ -1,0 +1,26 @@
+{
+  "base": "FL-SUNBIZ",
+  "consulted_at": "2026-05-01T14:06:00-05:00",
+  "queries_executed": 7,
+  "status": "ok",
+  "hits": [],
+  "no_hits": [
+    "Pablo Vargas Mendoza",
+    "Pablo Vargas",
+    "P. Vargas",
+    "Vargas Energy USA",
+    "Vargas Energy USA LLC",
+    "Vargas Energia",
+    "Carmen Lucia Vargas"
+  ],
+  "legal_context": [
+    "O Florida Department of State — Division of Corporations publica registros de todas as entidades incorporadas ou qualificadas na Flórida conforme Florida Sunshine Laws (F.S. § 119.01). A ausência de registros indica que Pablo Vargas Mendoza não aparece como officer, registered agent ou authorized person em nenhuma entidade com registro ativo ou inativo na Flórida.",
+    "A Flórida tem alta concentração de empresas com proprietários latino-americanos, especialmente no setor de energia e commodities (corredor Miami-Houston). Ausência em FL-SUNBIZ não exclui presença em outros estados."
+  ],
+  "next_frontiers": [
+    "Verificar registro em outros estados com alta concentração de empresas do setor de petróleo e gás: Texas (TX Comptroller), Delaware (incorporações offshore)",
+    "Buscar pelo nome da subsidiária americana 'Vargas Energy USA LLC' como razão social direta no Sunbiz",
+    "Verificar se algum address em Miami Beach, Brickell ou Coral Gables está associado a Vargas via OpenCorporates"
+  ],
+  "methodology_note": "Busca via Sunbiz Entity Name Search e Officer Name Search (search.sunbiz.org). Cobertura: todas as entidades ativas e inativas com registro na Flórida. Transliterações testadas: variações sem acentos e com inversão de sobrenome."
+}

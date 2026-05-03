@@ -76,23 +76,23 @@ Leaks Database.
 Exemplo de hit:
 ```json
 {
-  "variation_matched": "Ricardo Magro",
+  "variation_matched": "Carlos Ferreira",
   "match_type": "exact",
   "source_id": "us_fl/P19000012345",
   "source_url": "https://opencorporates.com/companies/us_fl/P19000012345",
   "confidence": "provavel",
   "raw_record": {
-    "officer_name": "RICARDO ANDRADE MAGRO",
+    "officer_name": "CARLOS EDUARDO FERREIRA",
     "position": "director",
     "start_date": "2019-03-15",
     "end_date": null,
     "company_number": "P19000012345",
     "jurisdiction_code": "us_fl",
-    "company_name": "REFIT ENERGY CORP"
+    "company_name": "FERREIRA GLOBAL ENERGY CORP"
   },
   "normalized": {
-    "full_name": "RICARDO ANDRADE MAGRO",
-    "entity_name": "REFIT ENERGY CORP",
+    "full_name": "CARLOS EDUARDO FERREIRA",
+    "entity_name": "FERREIRA GLOBAL ENERGY CORP",
     "entity_type": "Corporation",
     "role": "director",
     "state": "FL",

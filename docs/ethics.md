@@ -57,10 +57,18 @@ Resposta padrão:
 Se a solicitação visar suprimir dissidência, assediar ativistas, ou
 produzir dossiê para fins políticos não jornalísticos, recusar.
 
-### 2.4 Jurisdições não cobertas
+### 2.4 Alvos sem vínculo com os EUA
 
-O pipeline cobre Brasil ↔ Estados Unidos. Não iniciar buscas em outras
-jurisdições — não há metodologia validada para elas.
+O pipeline é otimizado para investigações de alvos com origem no Brasil (BR).
+Também suporta outros países latino-americanos (PE, CO, AR, MX) e qualquer
+país de origem quando o alvo possui empresa, conta ou atividade registrada
+nos EUA. Configure o campo `origin_country` no `target.yaml` com o código
+ISO 3166-1 alpha-2 do país de origem.
+
+Não iniciar o pipeline quando o alvo não tiver nenhum vínculo documentado
+ou presumível com os EUA — as bases cobertas (FEC, LDA, FARA, registros
+corporativos estaduais) não retornarão resultados e a investigação não
+terá objeto.
 
 ---
 
@@ -116,9 +124,7 @@ Achados `confirmado` (≥ 3 fontes primárias) ainda requerem revisão editorial
 ### 4.3 Dossiês de casos reais não devem estar em repositórios públicos
 
 O arquivo `cases/` está no `.gitignore`. **Nunca commitar dossiês de casos
-reais no repositório.** Os arquivos em `examples/` são fictícios
-(case-fictional) ou sanitizados (case-magro-redacted) — não contêm dados
-sensíveis reais.
+reais no repositório.** Os arquivos em `examples/` são fictícios — não contêm dados sensíveis reais.
 
 ### 4.4 Compartilhamento interno
 

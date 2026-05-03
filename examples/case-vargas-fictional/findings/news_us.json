@@ -1,0 +1,24 @@
+{
+  "base": "NEWS-US",
+  "consulted_at": "2026-05-01T14:16:00-05:00",
+  "queries_executed": 8,
+  "status": "ok",
+  "hits": [],
+  "no_hits": [
+    "Pablo Vargas Mendoza",
+    "Pablo Vargas",
+    "Vargas Energy USA",
+    "Vargas Energia Peru",
+    "Vargas Mendoza energy",
+    "Petroperú Vargas",
+    "Vargas Energy LLC",
+    "Pablo Vargas Peru oil"
+  ],
+  "legal_context": [],
+  "next_frontiers": [
+    "Buscar em Houston Chronicle e Midland Reporter-Telegram, especializados em cobertura do setor de petróleo e gás do Texas — possíveis registros de expansão de empresas peruanas no Permian Basin",
+    "Verificar no ProPublica (proPublica.org/data) e ICIJ Offshore Leaks Database por registros de Vargas Energia S.A. ou subsidiárias offshore",
+    "Buscar no Oil & Gas Journal e Platts (S&P Global) por anúncios de expansão de empresas peruanas no mercado americano — fontes especializadas do setor"
+  ],
+  "methodology_note": "Buscas via busca web em portais: The New York Times, The Washington Post, ProPublica, Reuters, AP News, Bloomberg, The Wall Street Journal, Houston Chronicle. Cobertura: artigos indexados 2010-2026. Buscas realizadas sem acentos (padrão para nomes hispânicos na imprensa americana)."
+}

@@ -1,0 +1,23 @@
+{
+  "base": "NEWS-BR",
+  "consulted_at": "2026-05-01T14:14:00-05:00",
+  "queries_executed": 7,
+  "status": "ok",
+  "hits": [],
+  "no_hits": [
+    "Pablo Vargas Mendoza",
+    "Pablo Vargas",
+    "Vargas Energia",
+    "Vargas Energy USA",
+    "Vargas Mendoza Peru",
+    "Petroperú Vargas",
+    "P. Vargas Mendoza"
+  ],
+  "legal_context": [],
+  "next_frontiers": [
+    "Busca em imprensa brasileira é corroborativa para alvo peruano — ausência esperada salvo se empresa tiver negócios com Petrobras ou participação em licitações no Brasil",
+    "Verificar Agência Brasil e Reuters Brasil por cobertura de empresas peruanas do setor de energia com interesse no mercado brasileiro",
+    "Considerar busca em espanhol nos portais brasileiros (Folha, Estadão) que ocasionalmente cobrem empresas andinas"
+  ],
+  "methodology_note": "Buscas via busca web em portais: Folha de S.Paulo, O Estado de S. Paulo, O Globo, Valor Econômico, The Intercept Brasil, Agência Pública, Reuters Brasil. Cobertura: artigos indexados 2010-2026. Nota: para alvo peruano, ausência na imprensa brasileira é resultado esperado — priorizar imprensa peruana e americana (NEWS-US)."
+}
