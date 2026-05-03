@@ -48,7 +48,7 @@ Toda afirmação no dossiê tem citação de fonte. "Não encontrado" também é
 ## O que NÃO faz (escopo fechado)
 
 - Não acessa bases pagas (Lexis, Sayari, Refinitiv)
-- Não faz reconhecimento facial nem OSINT visual (use uma skill OSINT separada)
+- Não faz reconhecimento facial nem OSINT visual (use uma skill OSINT separada) - Confira em https://github.com/reichaves/osint-investigation
 - Não roda de forma agendada — investigações são pontuais e dirigidas
 - Não substitui o repórter: o pipeline entrega leads estruturados; a interpretação editorial fica com o jornalista
 

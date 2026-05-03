@@ -57,7 +57,7 @@ The dossier PDF includes a prominent **Legal and Ethical Notice** section (secti
 ## What it does NOT do
 
 - No access to paid databases (Lexis, Sayari, Refinitiv)
-- No facial recognition or visual OSINT (use a separate OSINT skill for that)
+- No facial recognition or visual OSINT (use a separate OSINT skill for that) - Check it out at https://github.com/reichaves/osint-investigation
 - No scheduled/automated runs — investigations are one-off and directed
 - Does not replace the reporter: the pipeline delivers structured leads; editorial interpretation stays with the journalist
 
