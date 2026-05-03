@@ -4,7 +4,7 @@
       "command": "E:/Code/fec-mcp-server/Scripts/python.exe",
       "args": ["E:/Code/fec-mcp-server/repo/start_server.py"],
       "env": {
-        "FEC_API_KEY": "r2za688AtePmfuNn0F0JP55WaKS1ler8kb8VfgCr"
+        "FEC_API_KEY": "${FEC_API_KEY}"
       }
     }
   }

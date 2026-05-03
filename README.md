@@ -513,6 +513,27 @@ This pipeline is designed for investigating **persons of public relevance**: exe
 
 ---
 
+## Security
+
+This pipeline is a **local CLI tool** — no web server, no listening port, no persistent process. Key properties:
+
+- Network calls go only to a [fixed list of U.S. public databases](docs/security-model.md#network-access) (FEC, FARA, OpenCorporates, state registries) — no user-supplied URLs are fetched
+- All output is written to `cases/<slug>/` — path traversal is blocked by `_slug()` validation
+- Subprocesses use `shell=False` (list arguments) — no shell injection vector
+- No `pickle`, `eval`, or `exec` anywhere in the codebase
+- API keys live in `.env` only — never in source code (`.env` and `.mcp.json` are gitignored)
+
+Run the automated security test suite:
+
+```bash
+pytest tests/test_security.py -v
+```
+
+To report a vulnerability privately, see [`SECURITY.md`](SECURITY.md).
+Full trust model and safe-usage checklist: [`docs/security-model.md`](docs/security-model.md).
+
+---
+
 ## Citation
 
 If this pipeline contributes to a published story or research, please cite:

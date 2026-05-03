@@ -17,6 +17,7 @@ from __future__ import annotations
 import importlib.util
 import json
 import logging
+import re
 import shutil
 import subprocess
 import sys
@@ -60,8 +61,16 @@ def _load_target(target_path: Path) -> dict[str, Any]:
 
 
 def _slug(name: str) -> str:
-    """Produce a filesystem-safe slug from a full name."""
-    return name.lower().replace(" ", "-").replace(".", "")[:40]
+    """Produce a filesystem-safe slug from a full name.
+
+    Only [a-z0-9-] characters are kept, preventing path traversal via
+    names that contain '..' or other filesystem metacharacters.
+    """
+    raw = name.lower().replace(" ", "-").replace(".", "")[:40]
+    slug = re.sub(r"[^a-z0-9\-]", "", raw)
+    if not slug:
+        raise ValueError(f"Invalid target name produces empty slug: {name!r}")
+    return slug
 
 
 def _run_script(script: Path, args: list[str]) -> subprocess.CompletedProcess:
