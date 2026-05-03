@@ -530,6 +530,27 @@ Este pipeline foi desenvolvido para investigação de **pessoas com relevância 
 
 ---
 
+## Segurança
+
+Este pipeline é uma **ferramenta CLI local** — sem servidor web, sem porta de escuta, sem processo persistente. Propriedades principais:
+
+- Chamadas de rede vão apenas para uma [lista fixa de bases públicas americanas](docs/security-model.md#network-access) (FEC, FARA, OpenCorporates, registros estaduais) — nenhuma URL fornecida pelo usuário é acessada
+- Todo output é gravado em `cases/<slug>/` — path traversal é bloqueado pela validação de `_slug()`
+- Subprocessos usam `shell=False` (argumentos como lista) — sem vetor de injeção de shell
+- Sem `pickle`, `eval` ou `exec` em nenhum lugar do código
+- Chaves de API ficam apenas em `.env` — nunca no código-fonte (`.env` e `.mcp.json` estão no `.gitignore`)
+
+Execute os testes de segurança automatizados:
+
+```bash
+pytest tests/test_security.py -v
+```
+
+Para reportar uma vulnerabilidade de forma privada, veja [`SECURITY.md`](SECURITY.md).
+Modelo de confiança completo e checklist de uso seguro: [`docs/security-model.md`](docs/security-model.md).
+
+---
+
 ## Citação
 
 Se este pipeline contribuir para uma reportagem ou pesquisa publicada, sugerimos citar:
