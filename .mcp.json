@@ -2,10 +2,7 @@
   "mcpServers": {
     "fec-mcp": {
       "command": "E:/Code/fec-mcp-server/Scripts/python.exe",
-      "args": ["E:/Code/fec-mcp-server/repo/start_server.py"],
-      "env": {
-        "FEC_API_KEY": "${FEC_API_KEY}"
-      }
+      "args": ["E:/Code/due-diligence-transnacional/scripts/start_fec_mcp.py"]
     }
   }
 }
